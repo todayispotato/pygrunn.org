@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" media="all"></link>
+    <link rel="stylesheet" type="text/css" href="/static/gplus.activity.css" media="all"></link>
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <h1><img id="logo" src="/static/pygrunn.jpg" alt="PyGrunn"/></h1>
+        <h2>May 10th 2013 at the Forum Images in Groningen</h2>
+        <p>PyGrunn is the 'Python and friends' conference with a local footprint and global mindset. Firmly rooted in the open source culture it aims to provide the leading lights in advanced internet technologies a platform to inform, inspire and impress their peers.</p>
+        <div style="clear:both"></div>
+        <nav> 
+          <ul>
+  	        <li><a href="/" class="news {% block news_class %}{% endblock %}">News</a></li>
+  	        <li><a href="/pages/schedule.html" class="schedule {% if page and page.title == 'Schedule' %}active{% endif %}">Schedule</a></li>
+  	        <li><a href="/pages/venue.html" class="venue {% if page and page.title == 'Venue' %}active{% endif %}">Venue</a></li>
+  	        <li><a href="/pages/discussion.html" class="discussion {% if page and page.title == 'Discussion' %}active{% endif %}">Discussion</a></li>
+            <li><a href="/pages/tickets.html" class="tickets {% if page and page.title == 'Tickets' %}active{% endif %}">Tickets</a></li>
+            <li><a href="/pages/rfp.html" class="rfp {% if page and page.title == 'RFP' %}active{% endif %}">RFP</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="content">
+        <div id="main_content">
+          {% block content %}
+          {% endblock %}
+        </div>
+        <aside>
+          {% include "twitter.html" %}
+          {% include "googleplus.html" %}
+          {% include "sponsors.html" %}
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

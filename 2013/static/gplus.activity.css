@@ -1,0 +1,126 @@
+/* 	CSS of Google+ Activity Widget v1.0
+	Blog : http://www.moretechtips.net
+	Project: http://code.google.com/p/googleplus-activity-widget/
+*/
+
+/* activity list */
+ul.gpaw-body{
+	font: 100% arial,sans-serif;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	position:relative;
+	background:#fbfbfb
+}
+ul.gpaw-body li{
+	margin:0 0 4px 0;
+	padding:4px;
+	list-style-type:none;
+	overflow:hidden
+}
+ul.gpaw-body .thumb{
+	display:block;
+	float:right;
+	margin:0 0 5px 5px
+}
+ul.gpaw-body .thumb a{
+	text-decoration:none;
+	outline:none
+}
+ul.gpaw-body .thumb img{
+	border:#eee 1px solid
+}
+ul.gpaw-body .thumb a:hover img{
+	border:#ccc 1px solid
+}
+ul.gpaw-body .title a{
+	outline:none;
+	text-decoration:none;
+	color:#000
+}
+ul.gpaw-body .title a:hover {
+	color:#666
+}
+
+/* meta : date, plusones */
+ul.gpaw-body .meta {
+	color:#999999;
+	display:block;
+	font-size:95%;
+	margin:5px 0 0;
+	overflow:hidden;
+	clear:both
+}
+ul.gpaw-body .meta a, ul.gpaw-body .meta span{
+	display:block;
+	float:left;
+	padding:0 6px 0 0
+}
+ul.gpaw-body .meta a{
+	color:#999999;
+	text-decoration:none
+}
+ul.gpaw-body .meta a:hover{
+	color:#333;
+	text-decoration:none
+}
+ul.gpaw-body .plusones{
+	color:#3366CC;
+	font-style: italic
+}
+ul.gpaw-body .shares{
+	color:#3366CC
+}	
+
+/* Fade-out effect with transparent png  */
+ul.gpaw-body .fade{
+    background:expression("");
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10
+}
+/* Profile */
+.gpaw-profile{
+	border-bottom: 1px solid #E5E5E5;
+	padding:8px;
+	overflow:hidden
+}
+.gpaw-profile a.avatar{
+	display:block;
+	float:left;
+	text-decoration:none;
+	outline:none;
+	margin:0 10px 0 0
+}
+.gpaw-profile a.avatar img{
+	border:#eee 1px solid;
+	display:block
+}
+.gpaw-profile a.avatar:hover img{
+	border:#ccc 1px solid;
+	display:block
+}
+.gpaw-profile .name{
+	font-size:120%;
+	color: #fff;
+	font-weight:bold;
+	overflow:hidden;
+	margin:0 0 8px 0
+}
+.gpaw-profile a.add{
+	display:inline-block;
+	text-decoration:none;
+	outline:none;
+	padding:4px 8px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	background-color: #F5F5F5;
+    color: #444444
+}
+.gpaw-profile a.add:hover{
+	background-color: #D14836;
+	color: #fff;
+}
