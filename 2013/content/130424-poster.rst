@@ -1,0 +1,11 @@
+Poster PyGrunn 2013
+===================
+
+:date: 2013-04-24 14:00
+:author: Berco Beute
+
+The moment you all have been waiting for is here: The official PyGrunn 2013 poster! We think it's truly awesome. Feel free to spread it (we have higher resolutions available for printing).
+
+.. image:: static/pygrunn2013_poster.jpg
+    :scale: 50 %
+    :align: center
