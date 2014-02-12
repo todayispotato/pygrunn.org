@@ -23,6 +23,7 @@ a:hover,.uk-link:hover{color:#312A1E;}
 .uk-info-section > *:last-child{margin-bottom:0;}
 .uk-margin-large{margin:45px 0 !important;}
 .uk-text-medium{font-size:20px;line-height:26px;}
+.uk-list-square{list-style-type:square;}
 
 /* Icons */
 .uk-icon-large:before{font-size:40px;vertical-align:middle;line-height:80px;}
@@ -30,13 +31,17 @@ a:hover,.uk-link:hover{color:#312A1E;}
 .uk-icon-heading-dark{background:#E4E5E2;color:#312A1E;}
 
 /* Logo */
-.uk-logo{width:197px;height:60px;background:url(../images/pygrunn_logo.png) no-repeat 0 0;margin:10px 0;}
+.uk-logo{width:197px;height:60px;background:url(../images/pygrunn_logo.png) no-repeat 0 0;margin:10px 0;background-size:contain;}
 
 /* Layouts */
 .uk-offcanvas-page{position:absolute;}
 .headerbar{position:fixed;top:0;width:100%;z-index:12;}
-.fullscreen{background:url(../images/top_bg.jpg) no-repeat 50% 50%;background-size:cover;z-index:-10;}
+.fullscreen{background:url(../images/top_bg.jpg) no-repeat 50% 50%;background-size:cover;position:relative;}
 #feature{font-family:'Patua One',cursive;}
+
+/* Sponsors */
+.sponsor-images{background:rgba(240,240,240,0.9);position:absolute;bottom:0;left:0;width:100%;}
+.sponsor-images span{padding:25px 0;}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
@@ -52,30 +57,35 @@ a:hover,.uk-link:hover{color:#312A1E;}
 .uk-panel-box .uk-panel-title{color:#312A1E;font-size:24px;line-height:30px;}
 .uk-panel-box > * + .uk-panel-title{margin-top:25px;}
 
-/* Slides */
-#slides{display:none;position:relative;box-shadow:0 1px 10px rgba(0,0,0,0.1);-moz-box-shadow:0 1px 10px rgba(0,0,0,0.1);-webkit-box-shadow:0 1px 10px rgba(0,0,0,0.1);}
-.slidesjs-navigation{display:block;position:absolute;top:50%;margin-top:-30px;z-index:11;width:60px;height:60px;background:#FFFFFF;color:#312A1E;border-radius:50%;}
-.slidesjs-navigation:hover{background:#312A1E;color:#E4E5E2;}
-.slidesjs-previous{left:20px;}
-.slidesjs-next{right:20px;}
-.slidesjs-navigation > i{width:60px;height:60px;text-align:center;}
-.slidesjs-navigation .uk-icon-large:before{font-size:30px;line-height:60px;}
-
 /* DL */
 .uk-description-list-horizontal > dt{width:100px;}
 .uk-description-list-horizontal > dd{margin-left:120px;}
+
+/* Social */
+.social > a{color:#E4E5E2;font-size:46px;margin-right:20px;margin-top:10px;}
+.social > a:last-child{margin-right:0;}
+.social > a:hover{text-decoration:none;}
+
+/* Overlay */
+.uk-overlay{overflow:hidden;}
+.uk-overlay img{transform-origin:left bottom 0;-ms-transform-origin:left bottom 0;-webkit-transform-origin:left bottom 0;transition:all 0.4s ease-in-out 0s;-webkit-transition:all 0.4s ease-in-out 0s;}
+.uk-overlay:hover .uk-overlay-area{left:0;}
+.uk-overlay:hover img{transform:scale(1.2) translate(-20px);-ms-transform:scale(1.2) translate(-20px);-webkit-transform:scale(1.2) translate(-20px);}
 
 /* Only Phones */
 @media (max-width:768px) {
 	/* General */
 	.uk-text-large{font-size:20px;line-height:28px;}
-	
+
 	/* Extra classes */
 	.uk-width-small-1-1{width:100%}
 	.uk-width-small-1-2{width:50%}
 	.block-large{padding:65px 0;}
 	.block-small{padding:20px 0;}
 	.block{padding:35px 0;}
+
+	/* Logo */
+	.uk-logo{width:131px;height:40px;margin:20px 0;}
 }
 
 /* Hi-res Images */
@@ -84,5 +94,5 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2){
 	/* Logo */
-	.uk-logo{background-image:url(../images/pygrunn_logo@2x.png);background-size:197px 60px;}
+	.uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
 }
