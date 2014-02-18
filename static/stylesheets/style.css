@@ -46,8 +46,8 @@ a:hover,.uk-link:hover{color:#312A1E;}
 #feature{font-family:'Patua One',cursive;}
 
 /* Sponsors */
-.sponsor-images{background:rgba(240,240,240,0.9);position:absolute;bottom:0;left:0;width:100%;}
-.sponsor-images span{padding:25px 0;}
+.sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;}
+.sponsor-images span{padding:25px 10px;}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
@@ -80,19 +80,19 @@ a:hover,.uk-link:hover{color:#312A1E;}
 
 /* Only Phones */
 @media (max-width:768px) {
-	/* General */
-	.uk-text-large{font-size:20px;line-height:28px;}
-	h3 > span,.uk-h3 > span{display:block;}
+    /* General */
+    .uk-text-large{font-size:20px;line-height:28px;}
+    h3 > span,.uk-h3 > span{display:block;}
 
-	/* Extra classes */
-	.uk-width-small-1-1{width:100%}
-	.uk-width-small-1-2{width:50%}
-	.block-large{padding:65px 0;}
-	.block-small{padding:20px 0;}
-	.block{padding:35px 0;}
+    /* Extra classes */
+    .uk-width-small-1-1{width:100%}
+    .uk-width-small-1-2{width:50%}
+    .block-large{padding:65px 0;}
+    .block-small{padding:20px 0;}
+    .block{padding:35px 0;}
 
-	/* Logo */
-	.uk-logo{width:131px;height:40px;margin:20px 0;}
+    /* Logo */
+    .uk-logo{width:131px;height:40px;margin:20px 0;}
 }
 
 /* Hi-res Images */
@@ -100,6 +100,6 @@ a:hover,.uk-link:hover{color:#312A1E;}
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2){
-	/* Logo */
-	.uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
+    /* Logo */
+    .uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
 }
