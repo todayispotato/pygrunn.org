@@ -8,7 +8,8 @@ body{background:#F0F0F0;color:#312A1E;font-family:'Quattrocento',serif;font-size
 .uk-text-muted{color:#AAAAAA !important;}
 h1,h2,h3,h4,h5,h6{font-family:'Patua One',cursive;color:#312A1E;}
 a,.uk-link{color:#F1505A;}
-a:hover,.uk-link:hover{color:#312A1E;}
+a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
+.uk-bg-dark a:hover,.uk-bg-dark .uk-link:hover{color:#FFFFFF;}
 *:focus,a:focus{outline:none;}
 
 /* Extra classes */
@@ -47,7 +48,12 @@ a:hover,.uk-link:hover{color:#312A1E;}
 
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;}
-.sponsor-images span{padding:25px 10px;}
+.sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;margin:15px !important;}
+#paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
+#getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
+#goldmund-logo{width:210px;height:39px;background-image:url(../images/sponsors/goldmund_light.png);}
+#voys-logo{width:180px;height:20px;background-image:url(../images/sponsors/voys_light.png);}
+#launchcafe-logo{width:150px;height:38px;background-image:url(../images/sponsors/launchcafe_light.png);}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
@@ -93,6 +99,10 @@ a:hover,.uk-link:hover{color:#312A1E;}
 
     /* Logo */
     .uk-logo{width:131px;height:40px;margin:20px 0;}
+
+    /* Sponsors */
+    .sponsor-img{margin:5px !important;}
+    #launchcafe-logo{margin-top:0 !important;margin-bottom:15px !important;width:100px;height:25px;}
 }
 
 /* Hi-res Images */
@@ -102,4 +112,10 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2){
     /* Logo */
     .uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
+    /* Sponsor Logos */
+    #paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
+    #getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}
+    #goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
+    #voys-logo{background-image:url(../images/sponsors/voys_light@2x.png);}
+    #launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light@2x.png);}
 }
