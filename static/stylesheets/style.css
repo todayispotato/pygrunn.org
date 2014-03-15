@@ -51,7 +51,9 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;margin:15px !important;}
 #paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
 #getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
-#goldmund-logo{width:210px;height:39px;background-image:url(../images/sponsors/goldmund_light.png);}
+#minddistrict-logo{width:300px;height:68px;background-image:url(../images/sponsors/minddistrict_light.png);}
+#goldmund-logo{width:300px;height:45px;background-image:url(../images/sponsors/goldmund_light.png);}
+#at-logo{width:108px;height:50px;background-image:url(../images/sponsors/at_light.png);}
 #voys-logo{width:180px;height:20px;background-image:url(../images/sponsors/voys_light.png);}
 #launchcafe-logo{width:150px;height:38px;background-image:url(../images/sponsors/launchcafe_light.png);}
 
@@ -116,6 +118,8 @@ only screen and (min-device-pixel-ratio: 2){
     #paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
     #getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}
     #goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
+    #minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light@2x.png);}
+    #at-logo{background-image:url(../images/sponsors/at_light@2x.png);}
     #voys-logo{background-image:url(../images/sponsors/voys_light@2x.png);}
     #launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light@2x.png);}
 }
