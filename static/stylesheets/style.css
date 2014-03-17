@@ -25,7 +25,8 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-info-section > *:last-child{margin-bottom:0;}
 .uk-margin-large{margin:45px 0 !important;}
 .uk-text-medium{font-size:20px;line-height:26px;}
-.uk-iframe{max-width:650px;}
+.uk-iframe{max-width:100%;}
+.uk-text-hidden{text-indent:100%;overflow:hidden;white-space:nowrap;}
 
 /* List Icon */
 .uk-list-icon li{padding-left:12px;position:relative;}
@@ -47,15 +48,16 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 #feature{font-family:'Patua One',cursive;}
 
 /* Sponsors */
-.sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;}
-.sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;margin:15px !important;}
-#paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
-#getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
-#minddistrict-logo{width:300px;height:68px;background-image:url(../images/sponsors/minddistrict_light.png);}
-#goldmund-logo{width:300px;height:44px;background-image:url(../images/sponsors/goldmund_light.png);}
-#at-logo{width:130px;height:60px;background-image:url(../images/sponsors/at_light.png);}
-#voys-logo{width:180px;height:20px;background-image:url(../images/sponsors/voys_light.png);}
-#launchcafe-logo{width:150px;height:38px;background-image:url(../images/sponsors/launchcafe_light.png);}
+.sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
+.sponsor-images-small{background:rgba(11,51,63,1);}
+.sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;height:auto;max-width:100%}
+.paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
+.getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
+.minddistrict-logo{width:300px;height:68px;background-image:url(../images/sponsors/minddistrict_light.png);}
+.goldmund-logo{width:300px;height:44px;background-image:url(../images/sponsors/goldmund_light.png);}
+.at-logo{width:95px;height:44px;background-image:url(../images/sponsors/at_light.png);}
+.voys-logo{width:180px;height:20px;background-image:url(../images/sponsors/voys_light.png);}
+.launchcafe-logo{width:120px;height:31px;background-image:url(../images/sponsors/launchcafe_light.png);}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
@@ -104,7 +106,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 
     /* Sponsors */
     .sponsor-img{margin:5px !important;}
-    #launchcafe-logo{margin-top:0 !important;margin-bottom:15px !important;width:100px;height:25px;}
+    /*.at-logo{max-width: 60px;}*/
 }
 
 /* Hi-res Images */
@@ -115,11 +117,11 @@ only screen and (min-device-pixel-ratio: 2){
     /* Logo */
     .uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
     /* Sponsor Logos */
-    #paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
-    #getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}
-    #goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
-    #minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light@2x.png);}
-    #at-logo{background-image:url(../images/sponsors/at_light@2x.png);}
-    #voys-logo{background-image:url(../images/sponsors/voys_light@2x.png);}
-    #launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light@2x.png);}
+    .paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
+    .getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}
+    .goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
+    .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light@2x.png);}
+    .at-logo{background-image:url(../images/sponsors/at_light@2x.png);}
+    .voys-logo{background-image:url(../images/sponsors/voys_light@2x.png);}
+    .launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light@2x.png);}
 }
