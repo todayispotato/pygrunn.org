@@ -58,6 +58,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .at-logo{width:95px;height:44px;background-image:url(../images/sponsors/at_light.png);}
 .voys-logo{width:180px;height:20px;background-image:url(../images/sponsors/voys_light.png);}
 .launchcafe-logo{width:120px;height:31px;background-image:url(../images/sponsors/launchcafe_light.png);}
+.experty-logo{width:180px;height:41px;background-image:url(../images/sponsors/experty_light.png);}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
@@ -124,4 +125,5 @@ only screen and (min-device-pixel-ratio: 2){
     .at-logo{background-image:url(../images/sponsors/at_light@2x.png);}
     .voys-logo{background-image:url(../images/sponsors/voys_light@2x.png);}
     .launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light@2x.png);}
+    .experty-logo{background-image:url(../images/sponsors/experty_light@2x.png);}
 }
