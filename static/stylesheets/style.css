@@ -27,6 +27,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-text-medium{font-size:20px;line-height:26px;}
 .uk-iframe{max-width:100%;}
 .uk-text-hidden{text-indent:100%;overflow:hidden;white-space:nowrap;}
+.uk-list-col-2{column-count:2;-webkit-column-count:2;-moz-column-count:2;}
 
 /* List Icon */
 .uk-list-icon li{padding-left:12px;position:relative;}
@@ -101,6 +102,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
     .block-large{padding:65px 0;}
     .block-small{padding:20px 0;}
     .block{padding:35px 0;}
+    .uk-list-col-2{column-count:1;-webkit-column-count:1;-moz-column-count:1;}
 
     /* Logo */
     .uk-logo{width:131px;height:40px;margin:20px 0;}
