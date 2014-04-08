@@ -8,15 +8,22 @@
           <div>
             {{data.static.product.price|amount}}
           </div>
-          <div>
+          <div ng-show="!data.toPay">
             <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.range"></select>
+          </div>
+          <div ng-show="data.toPay">
+            {{data.dynamic.quantity}}
           </div>
           <div class="payment-method">
             I would like to pay with
-            <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.static.paymentMethods">
-              <option value="">--</option>
-            </select>
-            .
+            <div ng-show="!data.toPay">
+              <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.static.paymentMethods">
+                <option value="">--</option>
+              </select>
+            </div>
+            <div ng-show="data.toPay">
+              {{data.dynamic.paymentMethod}}
+            </div>
           </div>
           <div ng-show="!data.toPay">
             Total: {{data.total|amount}}
@@ -25,47 +32,44 @@
             Total (with costs): {{data.totalCosts|amount}}
           </div>
           <div ng-show="toConfirm() && !data.toPay">
-            Does everything seem ok?
-            <button class="uk-button" ng-click="confirm()" ng-disabled="data.confirming">It does!</button>
+            <button class="uk-button" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
           </div>
           <div ng-show="data.toPay">
             <button class="uk-button" ng-click="pay()">Pay</button>
+            <button class="uk-button" ng-click="cancel()">Cancel</button>
           </div>
         </div>
         <div class="uk-width-1-2 uk-text-left">
           <div>
-            My name is
+            This ticket belogns to
             <input type="text" name="first_name" ng-model="data.dynamic.profile.first_name" required />
             <input type="text" name="last_name" ng-model="data.dynamic.profile.last_name" required />
-            .
           </div>
           <div>
-            I was born on
+            Born on
             <input type="text" name="date_of_birth" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
-            .
           </div>
           <div>
-            I am from
+            Country
             <select ng-model="data.dynamic.profile.country_code" ng-options="country for country in data.static.countries">
-              <option value="">--</option>
             </select>
-            and please send my tickets to
-            <input type="email" name="email" ng-model="data.dynamic.profile.email" required />.
           </div>
           <div>
-            Oh and I am a
+            Email
+            <input type="email" name="email" ng-model="data.dynamic.profile.email" required />
+          </div>
+          <div>
+            Gender
             <select name="gender" ng-model="data.dynamic.profile.gender">
-              <option value="">--</option>
-              <option value="male">male</option>
-              <option value="female">female</option>
+              <option value="1">male</option>
+              <option value="2">female</option>
             </select>
-            .
           </div>
         </div>
       </div>
       <div class="uk-width-1-1" ng-show="data.paid">
         We are processing your payment. If everything is ok, you will receive an email with your tickets!
-        <button type="button" class="uk-button" ng-click="data.paid = false">Order more!</button>
+        <button type="button" class="uk-button" ng-click="orderMore()">Order more!</button>
       </div>
     </div>
   </div>

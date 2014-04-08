@@ -6,9 +6,9 @@
 
   ticketsapp = angular.module("ticketsapp", ["ngRoute", "ngCookies"]);
 
-  ticketsapp.constant('currencies', {
-    '': '',
-    'EUR': '€'
+  ticketsapp.constant("currencies", {
+    "": "",
+    "EUR": "€"
   });
 
   ticketsapp.filter('amount', function(currencies) {
@@ -27,16 +27,18 @@
   });
 
   TicketsController = (function() {
-    TicketsController.$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "currencies"];
+    TicketsController.$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "$location", "currencies"];
 
-    function TicketsController(scope, http, window, routeParams, cookies, currencies) {
+    function TicketsController(scope, http, window, routeParams, cookies, location, currencies) {
       var _this = this;
       this.scope = scope;
       this.http = http;
       this.window = window;
       this.routeParams = routeParams;
       this.cookies = cookies;
+      this.location = location;
       this.currencies = currencies;
+      this.orderMore = __bind(this.orderMore, this);
       this.pay = __bind(this.pay, this);
       this.confirm = __bind(this.confirm, this);
       this.toConfirm = __bind(this.toConfirm, this);
@@ -44,6 +46,7 @@
       this.thereIsPayment = __bind(this.thereIsPayment, this);
       this.thereIsTotal = __bind(this.thereIsTotal, this);
       this.isPaid = __bind(this.isPaid, this);
+      this.cancel = __bind(this.cancel, this);
       this.scope.data = {};
       this.scope.data.confirming = false;
       this.scope.data.toPay = false;
@@ -59,7 +62,7 @@
           }
         },
         "paymentMethods": ["iDeal", "Mastercard", "Visa", "AmericanExpress", "VisaDebit"],
-        "countries": ['NL', 'US']
+        "countries": ["NL", "US"]
       };
       this.scope.data.dynamic = {
         "quantity": 0,
@@ -67,7 +70,7 @@
           "first_name": "Spyros",
           "last_name": "Ioakeimidis",
           "email": "spyrosikmd@gmail.com",
-          "gender": "male",
+          "gender": "1",
           "country_code": "NL",
           "date_of_birth": "1986-12-04"
         },
@@ -93,16 +96,18 @@
       angular.extend(this.scope, {
         toConfirm: this.toConfirm,
         confirm: this.confirm,
-        pay: this.pay
+        pay: this.pay,
+        cancel: this.cancel,
+        orderMore: this.orderMore
       });
     }
 
-    TicketsController.prototype.isPaid = function() {
-      return this.scope.data.paid = this.routeParams["paid"] === "success" && this.cookies.paymentUrl;
+    TicketsController.prototype.cancel = function() {
+      return this.scope.data.toPay = false;
     };
 
-    TicketsController.checkPaymentUrl = function() {
-      return true;
+    TicketsController.prototype.isPaid = function() {
+      return this.scope.data.paid = this.routeParams["paid"] === "success" && this.cookies.paymentUrl;
     };
 
     TicketsController.prototype.thereIsTotal = function() {
@@ -156,9 +161,15 @@
       return this.window.location.href = this.scope.data["static"].paymentUrl;
     };
 
+    TicketsController.prototype.orderMore = function() {
+      this.scope.data.paid = false;
+      delete this.cookies.paymentUrl;
+      return this.location.url(this.location.path() + "#tickets");
+    };
+
     return TicketsController;
 
-  }).call(this);
+  })();
 
   ticketsapp.controller("TicketsController", TicketsController);
 

@@ -2,9 +2,9 @@
 
 ticketsapp = angular.module("ticketsapp", ["ngRoute", "ngCookies"])
 
-ticketsapp.constant 'currencies', {
-  '': '',
-  'EUR': '€'
+ticketsapp.constant "currencies", {
+  "": "",
+  "EUR": "€"
 }
 
 ticketsapp.filter 'amount', (currencies) ->
@@ -18,9 +18,9 @@ ticketsapp.filter 'amount', (currencies) ->
 
 class TicketsController
 
-  @$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "currencies"]
+  @$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "$location", "currencies"]
 
-  constructor: (@scope, @http, @window, @routeParams, @cookies, @currencies) ->
+  constructor: (@scope, @http, @window, @routeParams, @cookies, @location, @currencies) ->
     @scope.data = {}
     @scope.data.confirming = false
     @scope.data.toPay = false
@@ -43,8 +43,8 @@ class TicketsController
         "VisaDebit"
       ],
       "countries": [
-        'NL',
-        'US'
+        "NL",
+        "US"
       ]
     }
     @scope.data.dynamic = {
@@ -53,7 +53,7 @@ class TicketsController
         "first_name": "Spyros",
         "last_name": "Ioakeimidis",
         "email": "spyrosikmd@gmail.com",
-        "gender": "male",
+        "gender": "1",
         "country_code": "NL",
         "date_of_birth": "1986-12-04"
       }
@@ -77,12 +77,14 @@ class TicketsController
       toConfirm: @toConfirm
       confirm: @confirm
       pay: @pay
+      cancel: @cancel
+      orderMore: @orderMore
+
+  cancel: =>
+    @scope.data.toPay = false
 
   isPaid: =>
     @scope.data.paid = @routeParams["paid"] is "success" and @cookies.paymentUrl
-
-  @checkPaymentUrl: =>
-    true
 
   thereIsTotal: =>
     parseFloat(@scope.data.total.amount) > 0
@@ -122,6 +124,11 @@ class TicketsController
 
   pay: =>
     @window.location.href = @scope.data.static.paymentUrl
+
+  orderMore: =>
+    @scope.data.paid = false
+    delete @cookies.paymentUrl
+    @location.url @location.path() + "#tickets"
 
 ticketsapp.controller("TicketsController", TicketsController)
 
