@@ -71,9 +71,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-navbar-toggle:hover,.uk-navbar-toggle:focus{color:#DC1B17;background:#FFFFFF;}
 
 /* Panel */
-.uk-panel-box{padding:0;color:#312A1E;background:none;}
-.uk-panel-box .uk-panel-title{color:#312A1E;font-size:24px;line-height:30px;}
-.uk-panel-box > * + .uk-panel-title{margin-top:25px;}
+.uk-panel-box{background:#E4E5E2;border-radius:10px;padding:20px;border: 1px solid white;}
 
 /* DL */
 .uk-description-list-horizontal > dt{width:100px;}
