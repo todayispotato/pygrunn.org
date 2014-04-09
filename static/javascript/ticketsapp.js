@@ -48,6 +48,17 @@
       this.isPaid = __bind(this.isPaid, this);
       this.cancel = __bind(this.cancel, this);
       this.scope.data = {};
+      this.target = document.querySelector('.spinner-container');
+      this.spinner = new Spinner({
+        lines: 13,
+        length: 3,
+        width: 2,
+        radius: 5,
+        corner: 0,
+        rotate: 0,
+        trail: 50,
+        speed: 1.4
+      });
       this.scope.data.confirming = false;
       this.scope.data.toPay = false;
       this.scope.data.paid = false;
@@ -140,6 +151,7 @@
     TicketsController.prototype.confirm = function() {
       var _this = this;
       this.scope.data.confirming = true;
+      this.spinner.spin(this.target);
       return this.http({
         url: "http://10.0.30.198:5000/confirm",
         dataType: "json",

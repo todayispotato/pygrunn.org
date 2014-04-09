@@ -1,81 +1,90 @@
-<div class="uk-grid">
-  <div class="uk-width-1-1">
-    <div class="uk-panel uk-panel-box">
-      <div class="uk-panel-badge uk-badge">Ticket</div>
-      <h3 class="uk-panel-title">{{data.static.product.name}}</h3>
-      <div class="uk-grid" ng-hide="data.paid">
+<div class="uk-panel uk-panel-box uk-panel-box-tickets uk-margin-large-top">
+  <div class="uk-panel-box-tickets-circle circle-left"></div>
+  <div class="uk-panel-box-tickets-circle circle-right"></div>
+  <div class="uk-panel-box-tickets-inner">
+    <div class="uk-panel-box-tickets-inner-content">
+      <div class="uk-grid uk-grid-divider" ng-hide="data.paid" data-uk-grid-match>
         <div class="uk-width-1-2">
-          <div>
-            {{data.static.product.price|amount}}
-          </div>
-          <div ng-show="!data.toPay">
-            <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.maxQuantity"></select>
-          </div>
-          <div ng-show="data.toPay">
-            {{data.dynamic.quantity}}
-          </div>
-          <div class="payment-method">
-            I would like to pay with
-            <div ng-show="!data.toPay">
-              <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.static.paymentMethods">
-                <option value="">--</option>
-              </select>
+          <div class="uk-padding-top uk-padding-bottom">
+            <h3 class="uk-panel-title">{{data.static.product.name}}</h3>
+            <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+              <div>
+                {{data.static.product.price|amount}}
+              </div>
+              <div ng-show="!data.toPay">
+                <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.maxQuantity"></select>
+              </div>
+              <div class="uk-text-bold" ng-show="data.toPay">
+                {{data.dynamic.quantity}}
+              </div>
+              <div>
+                Payment method
+              </div>
+              <div ng-show="!data.toPay">
+                <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.static.paymentMethods">
+                  <option value="">--</option>
+                </select>
+              </div>
+              <div class="uk-text-bold" ng-show="data.toPay">
+                {{data.dynamic.paymentMethod}}
+              </div>
+              <div class="uk-text-bold uk-width-1-1" ng-show="!data.toPay">
+                Total: {{data.total|amount}}
+              </div>
+              <div class="uk-text-bold uk-width-1-1" ng-show="data.toPay">
+                Total (with costs): {{data.totalCosts|amount}}
+              </div>
+              <div class="uk-width-1-1" ng-show="toConfirm() && !data.toPay">
+                <button class="uk-button uk-button-primary" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
+                <div class="spinner-container"></div>
+              </div>
+              <div class="uk-width-1-1" ng-show="data.toPay">
+                <button class="uk-button uk-button-primary" ng-click="pay()">Pay</button>
+                <button class="uk-button" ng-click="cancel()">Cancel</button>
+              </div>
             </div>
-            <div ng-show="data.toPay">
-              {{data.dynamic.paymentMethod}}
-            </div>
-          </div>
-          <div ng-show="!data.toPay">
-            Total: {{data.total|amount}}
-          </div>
-          <div ng-show="data.toPay">
-            Total (with costs): {{data.totalIncludingCosts|amount}}
-          </div>
-          <div ng-show="toConfirm() && !data.toPay">
-            <button class="uk-button" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
-          </div>
-          <div ng-show="data.toPay">
-            <button class="uk-button" ng-click="pay()">Pay</button>
-            <button class="uk-button" ng-click="cancel()">Cancel</button>
           </div>
         </div>
-        <div class="uk-width-1-2 uk-text-left">
-          <div>
-            This ticket belogns to
-            <input type="text" name="first_name" ng-model="data.dynamic.profile.first_name" required />
-            <input type="text" name="last_name" ng-model="data.dynamic.profile.last_name" required />
-          </div>
-          <div>
-            Born on
-            <input type="text" name="date_of_birth" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
-          </div>
-          <div>
-            Address
-            <input type="text" name="address" ng-model="data.dynamic.profile.address" required />
-          </div>
-          <div>
-            Zipcode
-            <input type="text" name="zipcode" ng-model="data.dynamic.profile.zipcode" required />
-          </div>
-          <div>
-            City
-            <input type="text" name="city" ng-model="data.dynamic.profile.city" required />
-          </div>
-          <div>
-            Country
-            <select ng-model="data.dynamic.profile.country_code" ng-options="country for country in data.static.countries">
-            </select>
-          </div>
-          <div>
-            Email
-            <input type="email" name="email" ng-model="data.dynamic.profile.email" required />
-          </div>
-          <div>
-            Gender
-            <select name="gender" ng-model="data.dynamic.profile.gender">
-              <option value="1">male</option>
-              <option value="2">female</option>
-            </select>
+        <div class="uk-width-1-2">
+          <div class="uk-padding-top uk-padding-bottom">
+            <div>
+                This ticket belogns to
+                <input type="text" name="first_name" ng-model="data.dynamic.profile.first_name" required />
+                <input type="text" name="last_name" ng-model="data.dynamic.profile.last_name" required />
+              </div>
+              <div>
+                Born on
+                <input type="text" name="date_of_birth" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
+              </div>
+              <div>
+                Address
+                <input type="text" name="address" ng-model="data.dynamic.profile.address" required />
+              </div>
+              <div>
+                Zipcode
+                <input type="text" name="zipcode" ng-model="data.dynamic.profile.zipcode" required />
+              </div>
+              <div>
+                City
+                <input type="text" name="city" ng-model="data.dynamic.profile.city" required />
+              </div>
+              <div>
+                Country
+                <select ng-model="data.dynamic.profile.country_code" ng-options="country for country in data.static.countries">
+                </select>
+              </div>
+              <div>
+                Email
+                <input type="email" name="email" ng-model="data.dynamic.profile.email" required />
+              </div>
+              <div>
+                Gender
+                <select name="gender" ng-model="data.dynamic.profile.gender">
+                  <option value="1">male</option>
+                  <option value="2">female</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </div>
