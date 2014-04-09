@@ -22,6 +22,8 @@ class TicketsController
 
   constructor: (@scope, @http, @window, @routeParams, @cookies, @location, @currencies) ->
     @scope.data = {}
+    @target = document.querySelector('.spinner-container')
+    @spinner = new Spinner({lines:13, length: 3, width: 2, radius: 5, corner: 0, rotate: 0, trail: 50, speed: 1.4})
     @scope.data.confirming = false
     @scope.data.toPay = false
     @scope.data.paid = false
@@ -103,6 +105,7 @@ class TicketsController
 
   confirm: =>
     @scope.data.confirming = true
+    @spinner.spin(@target)
     @http({
       url: "http://10.0.30.198:5000/confirm",
       dataType: "json",
