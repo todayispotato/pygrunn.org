@@ -24,7 +24,8 @@ class TicketsController
   constructor: (@scope, @http, @window, @routeParams, @cookies, @location, @currencies) ->
     @scope.data = {}
     @target = document.querySelector('.spinner-container')
-    @spinner = new Spinner({lines:13, length: 3, width: 2, radius: 5, corner: 0, rotate: 0, trail: 50, speed: 1.4})
+    spinner_options = {lines:11,length:2,width:2,radius:4,corner:1,rotate:0,trail:50,speed:1.3,top:'15px',left:'111px',color:'#312A1E'}
+    @spinner = new Spinner(spinner_options)
     @scope.data.confirming = false
     @scope.data.toPay = false
     # flag if payment is successful
@@ -58,15 +59,15 @@ class TicketsController
     @scope.data.dynamic = {
       "quantity": 0,
       "profile": {
-        "first_name": "Spyros",
-        "last_name": "Ioakeimidis",
-        "email": "spyrosikmd@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
         "gender": "1",
-        "country_code": "NL",
-        "date_of_birth": "1986-12-04",
-        "address": "Some 15",
-        "zipcode": "9715 CE",
-        "city": "Groningen"
+        "country_code": "",
+        "date_of_birth": "",
+        "address": "",
+        "zipcode": "",
+        "city": ""
       }
       "paymentMethod": "Mastercard",
     }
@@ -135,9 +136,11 @@ class TicketsController
       @cookies.paymentUrl = data.payment.payscreen_url
       @scope.data.confirming = false
       @scope.data.toPay = true
+      @spinner.stop()
     .error (data, status, headers, config) =>
       console.log "error"
       @scope.data.confirming = false
+      @spinner.stop()
 
   pay: =>
     @window.location.href = @scope.data.static.paymentUrl

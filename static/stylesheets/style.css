@@ -107,10 +107,11 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-overlay:hover img{transform:scale(1.2) translate(-20px);-ms-transform:scale(1.2) translate(-20px);-webkit-transform:scale(1.2) translate(-20px);}
 
 /* Tickets panel */
+.ticketsapp-container{padding:0 50px;}
 .uk-panel-box-tickets{padding:25px 65px;border:0;}
 .uk-panel-box-tickets-inner{background:#312A1E;border-radius:10px;padding:10px;}
 .uk-panel-box-tickets-inner-content{background:#E4E5E2;border-radius:10px;padding:0 25px;}
-.uk-panel-box-tickets-circle{position:absolute;top:50%;width:150px;height:150px;background:#312A1E;z-index:1;margin-top:-75px;border-radius:90%;}
+.uk-panel-box-tickets-circle{position:absolute;top:50%;width:150px;height:150px;background:#312A1E;z-index:1;margin-top:-75px;}
 .circle-left{left:-105px;}
 .circle-right{right:-105px;}
 .uk-panel-box-tickets .uk-panel-title{font-size:24px;line-height:30px;color:#312A1E;}
