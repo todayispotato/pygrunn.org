@@ -8,6 +8,7 @@ ticketsapp.constant "currencies", {
 }
 
 ticketsapp.filter 'amount', (currencies) ->
+  # format the input price to €0.00 EUR
   (input) ->
     amount = parseFloat(input?.amount).toFixed(2)
     if isNaN(amount)
@@ -24,9 +25,12 @@ class TicketsController
     @scope.data = {}
     @scope.data.confirming = false
     @scope.data.toPay = false
+    # flag if payment is successful
     @scope.data.paid = false
     @scope.data.currencies = @currencies
-    @scope.data.range = [1..8]
+    # maximum quantity of products
+    @scope.data.maxQuantity = [1..8]
+    # info about product, payment methods and countries
     @scope.data.static = {
       "product": {
         "name": "Regular PyGrunn",
@@ -47,6 +51,8 @@ class TicketsController
         "US"
       ]
     }
+
+    # THIS WILL GO AWAY
     @scope.data.dynamic = {
       "quantity": 0,
       "profile": {
@@ -55,24 +61,32 @@ class TicketsController
         "email": "spyrosikmd@gmail.com",
         "gender": "1",
         "country_code": "NL",
-        "date_of_birth": "1986-12-04"
+        "date_of_birth": "1986-12-04",
+        "address": "Some 15",
+        "zipcode": "9715 CE",
+        "city": "Groningen"
       }
       "paymentMethod": "Mastercard",
     }
+    # /THIS WILL GO AWAY
+
     @scope.data.total = {
       "amount": "0.00",
       "currency": "EUR"
     }
-    @scope.data.totalCosts = {
+    @scope.data.totalIncludingCosts = {
       "amount": "0.00",
       "currency": "EUR"
     }
+    # when quantity changes, calculate the total
     @scope.$watch "data.dynamic.quantity", (newValue, oldValue) =>
       if newValue isnt oldValue
         total = 0
         total += parseFloat(@scope.data.static.product.price.amount) * newValue
         @scope.data.total.amount = total.toFixed(2)
+    # when pages load, check if payment is successful to show success message
     @isPaid()
+    # extend the scope to include the methods
     angular.extend @scope,
       toConfirm: @toConfirm
       confirm: @confirm

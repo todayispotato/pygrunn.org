@@ -52,7 +52,7 @@
       this.scope.data.toPay = false;
       this.scope.data.paid = false;
       this.scope.data.currencies = this.currencies;
-      this.scope.data.range = [1, 2, 3, 4, 5, 6, 7, 8];
+      this.scope.data.maxQuantity = [1, 2, 3, 4, 5, 6, 7, 8];
       this.scope.data["static"] = {
         "product": {
           "name": "Regular PyGrunn",
@@ -72,7 +72,10 @@
           "email": "spyrosikmd@gmail.com",
           "gender": "1",
           "country_code": "NL",
-          "date_of_birth": "1986-12-04"
+          "date_of_birth": "1986-12-04",
+          "address": "Some 15",
+          "zipcode": "9715 CE",
+          "city": "Groningen"
         },
         "paymentMethod": "Mastercard"
       };
@@ -80,7 +83,7 @@
         "amount": "0.00",
         "currency": "EUR"
       };
-      this.scope.data.totalCosts = {
+      this.scope.data.totalIncludingCosts = {
         "amount": "0.00",
         "currency": "EUR"
       };

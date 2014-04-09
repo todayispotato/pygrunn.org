@@ -9,7 +9,7 @@
             {{data.static.product.price|amount}}
           </div>
           <div ng-show="!data.toPay">
-            <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.range"></select>
+            <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.maxQuantity"></select>
           </div>
           <div ng-show="data.toPay">
             {{data.dynamic.quantity}}
@@ -29,7 +29,7 @@
             Total: {{data.total|amount}}
           </div>
           <div ng-show="data.toPay">
-            Total (with costs): {{data.totalCosts|amount}}
+            Total (with costs): {{data.totalIncludingCosts|amount}}
           </div>
           <div ng-show="toConfirm() && !data.toPay">
             <button class="uk-button" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
@@ -48,6 +48,18 @@
           <div>
             Born on
             <input type="text" name="date_of_birth" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
+          </div>
+          <div>
+            Address
+            <input type="text" name="address" ng-model="data.dynamic.profile.address" required />
+          </div>
+          <div>
+            Zipcode
+            <input type="text" name="zipcode" ng-model="data.dynamic.profile.zipcode" required />
+          </div>
+          <div>
+            City
+            <input type="text" name="city" ng-model="data.dynamic.profile.city" required />
           </div>
           <div>
             Country
