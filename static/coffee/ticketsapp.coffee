@@ -290,7 +290,7 @@ class TicketsController
     # info about product, payment methods and countries
     @scope.data.static = {
       "product": {
-        "name": "Regular PyGrunn",
+        "name": "PyGrunn 2014",
         "price": {
           "amount": "25.00",
           "currency": "EUR"
@@ -304,25 +304,22 @@ class TicketsController
         "VisaDebit"
       ]
     }
-
-    # THIS WILL GO AWAY
+    # the data to be sent
     @scope.data.dynamic = {
       "quantity": 0,
       "profile": {
-        "first_name": "Spyros",
-        "last_name": "Ioakeimidis",
-        "email": "spyrosikmd@gmail.com",
-        "gender": "1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "gender": "",
         "country_code": "NL",
-        "date_of_birth": "1986-12-04",
-        "address": "Some 17",
-        "zipcode": "9711GE",
-        "city": "Groningen"
+        "date_of_birth": "",
+        "address": "",
+        "zipcode": "",
+        "city": ""
       }
-      "paymentMethod": "Mastercard",
+      "paymentMethod": "",
     }
-    # /THIS WILL GO AWAY
-
     @scope.data.total = {
       "amount": "0.00",
       "currency": "EUR"
@@ -388,7 +385,6 @@ class TicketsController
       @scope.data.toPay = true
       @spinner.stop()
     .error (data, status, headers, config) =>
-      console.log "error"
       @scope.data.confirming = false
       @spinner.stop()
 
@@ -398,7 +394,7 @@ class TicketsController
   orderMore: =>
     @scope.data.paid = false
     delete @cookies.paymentUrl
-    @location.url @location.path() + "#tickets"
+    @location.url @location.path()
 
 ticketsapp.controller("TicketsController", TicketsController)
 

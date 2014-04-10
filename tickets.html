@@ -52,19 +52,19 @@
         </div>
         <div class="uk-width-1-2">
           <div class="uk-padding-top uk-padding-bottom">
-            <span class="uk-display-block uk-width-1-1 uk-text-bold">This ticket belogns to:</span>
+            <span class="uk-display-block uk-width-1-1 uk-text-bold">This ticket belongs to:</span>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div ng-show="data.toPay">
+              <div ng-show="data.toPay" class="uk-width-1-1">
                 {{data.dynamic.profile.first_name}}
                 {{data.dynamic.profile.last_name}}
               </div>
-              <div ng-show="data.toPay">
+              <div ng-show="data.toPay" class="uk-width-1-1">
                 {{data.dynamic.profile.address}},
                 {{data.dynamic.profile.city}},
                 {{data.dynamic.profile.country_code}},
                 {{data.dynamic.profile.zipcode}}
               </div>
-              <div ng-show="data.toPay">
+              <div ng-show="data.toPay" class="uk-width-1-1">
                 {{data.dynamic.profile.email}}
               </div>
               <div ng-hide="data.toPay">
