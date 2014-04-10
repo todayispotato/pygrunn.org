@@ -89,7 +89,7 @@
               <div>
                 <div class="uk-grid uk-grid-small uk-grid-width-1-2" data-uk-grid-margin>
                   <div ng-hide="data.toPay">
-                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="code, country for country in data.countries">
+                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="country.code as country.name for country in data.countries">
                       <option value="">Country</option>
                     </select>
                   </div>
