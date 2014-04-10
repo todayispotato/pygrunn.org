@@ -54,45 +54,58 @@
           <div class="uk-padding-top uk-padding-bottom">
             <span class="uk-display-block uk-width-1-1 uk-text-bold">This ticket belogns to:</span>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div>
+              <div ng-show="data.toPay">
+                {{data.dynamic.profile.first_name}}
+                {{data.dynamic.profile.last_name}}
+              </div>
+              <div ng-show="data.toPay">
+                {{data.dynamic.profile.address}},
+                {{data.dynamic.profile.city}},
+                {{data.dynamic.profile.country_code}},
+                {{data.dynamic.profile.zipcode}}
+              </div>
+              <div ng-show="data.toPay">
+                {{data.dynamic.profile.email}}
+              </div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="first_name" placeholder="First name" ng-model="data.dynamic.profile.first_name" required />
               </div>
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="last_name" placeholder="Last name" ng-model="data.dynamic.profile.last_name" required />
               </div>
             </div>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="date_of_birth" placeholder="Birth date" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
               </div>
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="address" placeholder="Address" ng-model="data.dynamic.profile.address" required />
               </div>
             </div>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="zipcode" placeholder="Zipcode" ng-model="data.dynamic.profile.zipcode" required />
               </div>
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="text" name="city" placeholder="City" ng-model="data.dynamic.profile.city" required />
               </div>
             </div>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div>
+              <div ng-hide="data.toPay">
                 <input class="uk-width-1-1" type="email" name="email" placeholder="Email" ng-model="data.dynamic.profile.email" required />
               </div>
               <div>
                 <div class="uk-grid uk-grid-small uk-grid-width-1-2">
-                  <div>
-                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="country for country in data.static.countries">
+                  <div ng-hide="data.toPay">
+                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="code, country for country in data.countries">
                       <option value="">Country</option>
                     </select>
                   </div>
-                  <div>
+                  <div ng-hide="data.toPay">
                     <select class="uk-width-1-1" name="gender" ng-model="data.dynamic.profile.gender">
                       <option value="">Gender</option>
-                      <option value="1">male</option>
-                      <option value="2">female</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
                     </select>
                   </div>
                 </div>
