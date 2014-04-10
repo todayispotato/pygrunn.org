@@ -59,15 +59,15 @@ class TicketsController
     @scope.data.dynamic = {
       "quantity": 0,
       "profile": {
-        "first_name": "",
-        "last_name": "",
-        "email": "",
+        "first_name": "a",
+        "last_name": "b",
+        "email": "s@m.com",
         "gender": "1",
-        "country_code": "",
-        "date_of_birth": "",
-        "address": "",
-        "zipcode": "",
-        "city": ""
+        "country_code": "NL",
+        "date_of_birth": "1986-12-04",
+        "address": "s 17",
+        "zipcode": "9711GE",
+        "city": "Gr"
       }
       "paymentMethod": "Mastercard",
     }
