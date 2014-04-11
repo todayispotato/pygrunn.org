@@ -881,7 +881,9 @@
     };
 
     TicketsController.prototype.isPaid = function() {
-      return this.scope.data.paid = this.routeParams["paid"] === "success" && this.cookies.paymentUrl;
+      if (this.routeParams["paid"] === "success" && this.cookies.paymentUrl && data.isPaid === false) {
+        return data.isPaid = True;
+      }
     };
 
     TicketsController.prototype.thereIsTotal = function() {
@@ -953,6 +955,8 @@
     return $routeProvider.when("/", {
       templateUrl: "tickets.html",
       controller: "TicketsController"
+    }).otherwise({
+      redirectTo: "/"
     });
   });
 

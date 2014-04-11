@@ -348,7 +348,8 @@ class TicketsController
     @scope.data.toPay = false
 
   isPaid: =>
-    @scope.data.paid = @routeParams["paid"] is "success" and @cookies.paymentUrl
+    if @routeParams["paid"] is "success" and @cookies.paymentUrl and data.isPaid is false
+      data.isPaid = True
 
   thereIsTotal: =>
     parseFloat(@scope.data.total.amount) > 0
@@ -400,7 +401,10 @@ ticketsapp.controller("TicketsController", TicketsController)
 
 ticketsapp.config ($routeProvider) ->
   $routeProvider
-    .when "/", {
+    .when("/", {
       templateUrl: "tickets.html",
       controller: "TicketsController"
-    }
+    })
+    .otherwise({
+      redirectTo: "/"
+    })
