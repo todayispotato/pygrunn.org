@@ -164,6 +164,14 @@ select,textarea,input:not([type]),input[type="text"],input[type="password"],inpu
     /* Sponsors */
     .sponsor-img{margin:5px !important;}
     /*.at-logo{max-width: 60px;}*/
+
+    /* Tickets panel */
+    .ticketsapp-container{padding:0;}
+    .uk-panel-box-tickets{padding:10px;}
+    .uk-panel-box-tickets-inner{padding:5px;}
+    .uk-panel-box-tickets-inner-content{padding:0 10px;}
+    .uk-panel-box-tickets-circle{display:none;}
+    .ticketsapp-container .uk-grid.uk-grid-small > div + div {margin-top:10px;}
 }
 
 /* Hi-res Images */
