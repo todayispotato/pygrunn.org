@@ -39,8 +39,8 @@
                 Total (with costs): {{data.totalCosts|amount}}
               </div>
             </div>
-            <div class="uk-grid uk-grid-small uk-grid-width-1-1">
-              <div class="uk-width-1-1 spinner-container" ng-show="toConfirm() && !data.toPay">
+            <div class="uk-grid uk-grid-small uk-grid-width-1-1" ng-show="toConfirm() && !data.toPay">
+              <div class="uk-width-1-1 spinner-container">
                 <button class="uk-button uk-button-primary" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
               </div>
               <div class="uk-width-1-1" ng-show="data.toPay">
