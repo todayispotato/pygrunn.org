@@ -12,7 +12,7 @@
               {{data.settings.product.price|amount}}
               </div>
               <div ng-show="!data.toPay">
-                <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.maxQuantity"></select>
+                <select name="product_quantity" ng-model="data.dynamic.quantity" ng-options="n for n in data.maxQuantity" ng-disabled="data.confirming"></select>
               </div>
               <div class="uk-text-bold" ng-show="data.toPay">
                 {{data.dynamic.quantity}}
@@ -23,7 +23,7 @@
               Payment method
               </div>
               <div ng-show="!data.toPay">
-                <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.settings.paymentMethods">
+                <select ng-model="data.dynamic.paymentMethod" ng-options="method for method in data.settings.paymentMethods" ng-disabled="data.confirming">
                   <option value="">--</option>
                 </select>
               </div>
@@ -39,8 +39,8 @@
                 Total (with costs): {{data.totalCosts|amount}}
               </div>
             </div>
-            <div class="uk-grid uk-grid-small uk-grid-width-1-1" ng-show="toConfirm() && !data.toPay">
-              <div class="uk-width-1-1 spinner-container">
+            <div class="uk-grid uk-grid-small uk-grid-width-1-1" ng-show="toConfirm() || data.toPay">
+              <div class="uk-width-1-1 spinner-container" ng-show="toConfirm() && !data.toPay">
                 <button class="uk-button uk-button-primary" ng-click="confirm()" ng-disabled="data.confirming">Confirm</button>
               </div>
               <div class="uk-width-1-1" ng-show="data.toPay">
@@ -68,41 +68,41 @@
                 {{data.dynamic.profile.email}}
               </div>
               <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="first_name" placeholder="First name" ng-model="data.dynamic.profile.first_name" required />
+                <input class="uk-width-1-1" type="text" name="first_name" placeholder="First name" ng-model="data.dynamic.profile.first_name" ng-disabled="data.confirming" required />
               </div>
               <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="last_name" placeholder="Last name" ng-model="data.dynamic.profile.last_name" required />
-              </div>
-            </div>
-            <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
-              <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="date_of_birth" placeholder="Birth date" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" required />
-              </div>
-              <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="address" placeholder="Address" ng-model="data.dynamic.profile.address" required />
+                <input class="uk-width-1-1" type="text" name="last_name" placeholder="Last name" ng-model="data.dynamic.profile.last_name" ng-disabled="data.confirming" required />
               </div>
             </div>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
               <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="zipcode" placeholder="Zipcode" ng-model="data.dynamic.profile.zipcode" required />
+                <input class="uk-width-1-1" type="text" name="date_of_birth" placeholder="Birth date" ng-model="data.dynamic.profile.date_of_birth" data-uk-datepicker="{format:'YYYY-MM-DD'}" ng-disabled="data.confirming" required />
               </div>
               <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="text" name="city" placeholder="City" ng-model="data.dynamic.profile.city" required />
+                <input class="uk-width-1-1" type="text" name="address" placeholder="Address" ng-model="data.dynamic.profile.address" ng-disabled="data.confirming" required />
               </div>
             </div>
             <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
               <div ng-hide="data.toPay">
-                <input class="uk-width-1-1" type="email" name="email" placeholder="Email" ng-model="data.dynamic.profile.email" required />
+                <input class="uk-width-1-1" type="text" name="zipcode" placeholder="Zipcode" ng-model="data.dynamic.profile.zipcode" ng-disabled="data.confirming" required />
+              </div>
+              <div ng-hide="data.toPay">
+                <input class="uk-width-1-1" type="text" name="city" placeholder="City" ng-model="data.dynamic.profile.city" ng-disabled="data.confirming" required />
+              </div>
+            </div>
+            <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
+              <div ng-hide="data.toPay">
+                <input class="uk-width-1-1" type="email" name="email" placeholder="Email" ng-model="data.dynamic.profile.email" ng-disabled="data.confirming" required />
               </div>
               <div>
                 <div class="uk-grid uk-grid-small uk-grid-width-1-1 uk-grid-width-medium-1-2">
                   <div ng-hide="data.toPay">
-                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="country.altSpellings[0] as country.name for country in data.countries">
+                    <select class="uk-width-1-1" ng-model="data.dynamic.profile.country_code" ng-options="country.altSpellings[0] as country.name for country in data.countries" ng-disabled="data.confirming">
                       <option value="">Country</option>
                     </select>
                   </div>
                   <div ng-hide="data.toPay">
-                    <select class="uk-width-1-1" name="gender" ng-model="data.dynamic.profile.gender">
+                    <select class="uk-width-1-1" name="gender" ng-model="data.dynamic.profile.gender" ng-disabled="data.confirming">
                       <option value="">Gender</option>
                       <option value="1">Male</option>
                       <option value="2">Female</option>
