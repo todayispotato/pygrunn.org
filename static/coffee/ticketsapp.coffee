@@ -2,6 +2,32 @@
 
 ticketsapp = angular.module("ticketsapp", ["ngRoute", "ngCookies"])
 
+ticketsapp.service("spinner", ->
+  ###
+  Service that encapsulates the functionality of the Spinner plugin.
+  ###
+  options = {
+    lines:11,
+    length:2,
+    width:2,
+    radius:4,
+    corner:1,
+    rotate:0,
+    trail:50,
+    speed:1.3,
+    top:'15px',
+    left:'111px',
+    color:'#312A1E'
+  }
+  @$spinner = new Spinner(options)
+  {
+    spin: =>
+      @$spinner.spin(document.querySelector('.spinner-container'))
+
+    stop: =>
+      @$spinner.stop()
+  })
+
 ticketsapp.filter("amount", (currencies) ->
   ###
   Format the input price according to the following format €0.00 EUR
@@ -22,13 +48,12 @@ ticketsapp.filter("amount", (currencies) ->
 
 class TicketsController
 
-  @$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "$location", "currencies", "settings"]
+  @$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies",
+  "$location", "currencies", "settings", "spinner"]
 
-  constructor: (@scope, @http, @window, @routeParams, @cookies, @location, @currencies, @settings) ->
+  constructor: (@scope, @http, @window, @routeParams, @cookies, @location,
+      @currencies, @settings, @spinner) ->
     @scope.data = {}
-    @target = document.querySelector('.spinner-container')
-    spinner_options = {lines:11,length:2,width:2,radius:4,corner:1,rotate:0,trail:50,speed:1.3,top:'15px',left:'111px',color:'#312A1E'}
-    @spinner = new Spinner(spinner_options)
     @scope.data.confirming = false
     @scope.data.toPay = false
     # Flag to check if payment is successful.
@@ -81,17 +106,34 @@ class TicketsController
       orderMore: @orderMore
 
   cancel: =>
+    ###
+    Make the static fields dynamic and show the confirm button.
+    ###
     @scope.data.toPay = false
 
   isPaid: =>
-    if @routeParams["paid"] is "success" and @thereIsPayment() and data.isPaid is false
+    ###
+    Determine if the user has paid and the payment was successful.
+
+    @return [Boolean] True if there is a successful payment, false otherwise.
+    ###
+    if @routeParams["paid"] is "success" and @cookies.paymentUrl and data.isPaid is false
       data.isPaid = True
-      @scope.data.dynamic.paymentMethod = ""
 
   thereIsTotal: =>
+    ###
+    Determine if there is total.
+
+    @return [Boolean] True if there is total, false otherwise.
+    ###
     parseFloat(@scope.data.total.amount) > 0
 
   thereIsPayment: =>
+    ###
+    Determine if a payment method has been selected.
+
+    @return [Boolean] True if there is a payment method selected, false otherwise.
+    ###
     @scope.data.dynamic.paymentMethod isnt ""
 
   completeProfile: =>
@@ -119,7 +161,7 @@ class TicketsController
     Confirm the data with the server to receive the payment url.
     ###
     @scope.data.confirming = true
-    @spinner.spin(@target)
+    @spinner.spin()
     @http({
       url: "http://10.0.30.198:5000/confirm",
       dataType: "json",
@@ -134,6 +176,7 @@ class TicketsController
       @scope.data.settings.paymentUrl = data.payment.payscreen_url
       @cookies.paymentUrl = data.payment.payscreen_url
       @scope.data.confirming = false
+      # Make the dynamic fields static and show the pay button.
       @scope.data.toPay = true
       @spinner.stop()
     .error (data, status, headers, config) =>

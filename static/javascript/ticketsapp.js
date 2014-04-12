@@ -6,6 +6,40 @@
 
   ticketsapp = angular.module("ticketsapp", ["ngRoute", "ngCookies"]);
 
+  ticketsapp.service("spinner", function() {
+
+    /*
+    Service that encapsulates the functionality of the Spinner plugin.
+     */
+    var options;
+    options = {
+      lines: 11,
+      length: 2,
+      width: 2,
+      radius: 4,
+      corner: 1,
+      rotate: 0,
+      trail: 50,
+      speed: 1.3,
+      top: '15px',
+      left: '111px',
+      color: '#312A1E'
+    };
+    this.$spinner = new Spinner(options);
+    return {
+      spin: (function(_this) {
+        return function() {
+          return _this.$spinner.spin(document.querySelector('.spinner-container'));
+        };
+      })(this),
+      stop: (function(_this) {
+        return function() {
+          return _this.$spinner.stop();
+        };
+      })(this)
+    };
+  });
+
   ticketsapp.filter("amount", function(currencies) {
 
     /*
@@ -31,10 +65,9 @@
   });
 
   TicketsController = (function() {
-    TicketsController.$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "$location", "currencies", "settings"];
+    TicketsController.$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies", "$location", "currencies", "settings", "spinner"];
 
-    function TicketsController(scope, http, window, routeParams, cookies, location, currencies, settings) {
-      var spinner_options;
+    function TicketsController(scope, http, window, routeParams, cookies, location, currencies, settings, spinner) {
       this.scope = scope;
       this.http = http;
       this.window = window;
@@ -43,6 +76,7 @@
       this.location = location;
       this.currencies = currencies;
       this.settings = settings;
+      this.spinner = spinner;
       this.orderMore = __bind(this.orderMore, this);
       this.pay = __bind(this.pay, this);
       this.getCountries = __bind(this.getCountries, this);
@@ -54,21 +88,6 @@
       this.isPaid = __bind(this.isPaid, this);
       this.cancel = __bind(this.cancel, this);
       this.scope.data = {};
-      this.target = document.querySelector('.spinner-container');
-      spinner_options = {
-        lines: 11,
-        length: 2,
-        width: 2,
-        radius: 4,
-        corner: 1,
-        rotate: 0,
-        trail: 50,
-        speed: 1.3,
-        top: '15px',
-        left: '111px',
-        color: '#312A1E'
-      };
-      this.spinner = new Spinner(spinner_options);
       this.scope.data.confirming = false;
       this.scope.data.toPay = false;
       this.scope.data.paid = false;
@@ -120,21 +139,42 @@
     }
 
     TicketsController.prototype.cancel = function() {
+
+      /*
+      Make the static fields dynamic and show the confirm button.
+       */
       return this.scope.data.toPay = false;
     };
 
     TicketsController.prototype.isPaid = function() {
-      if (this.routeParams["paid"] === "success" && this.thereIsPayment() && data.isPaid === false) {
-        data.isPaid = True;
-        return this.scope.data.dynamic.paymentMethod = "";
+
+      /*
+      Determine if the user has paid and the payment was successful.
+      
+      @return [Boolean] True if there is a successful payment, false otherwise.
+       */
+      if (this.routeParams["paid"] === "success" && this.cookies.paymentUrl && data.isPaid === false) {
+        return data.isPaid = True;
       }
     };
 
     TicketsController.prototype.thereIsTotal = function() {
+
+      /*
+      Determine if there is total.
+      
+      @return [Boolean] True if there is total, false otherwise.
+       */
       return parseFloat(this.scope.data.total.amount) > 0;
     };
 
     TicketsController.prototype.thereIsPayment = function() {
+
+      /*
+      Determine if a payment method has been selected.
+      
+      @return [Boolean] True if there is a payment method selected, false otherwise.
+       */
       return this.scope.data.dynamic.paymentMethod !== "";
     };
 
@@ -173,7 +213,7 @@
       Confirm the data with the server to receive the payment url.
        */
       this.scope.data.confirming = true;
-      this.spinner.spin(this.target);
+      this.spinner.spin();
       return this.http({
         url: "http://10.0.30.198:5000/confirm",
         dataType: "json",
