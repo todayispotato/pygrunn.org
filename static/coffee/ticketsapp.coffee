@@ -163,7 +163,7 @@ class TicketsController
     @scope.data.confirming = true
     @spinner.spin()
     @http({
-      url: "http://10.0.30.198:5000/confirm",
+      url: "",
       dataType: "json",
       method: "POST",
       data: @scope.data.dynamic,
