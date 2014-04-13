@@ -24,53 +24,10 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-bg-dark{background:#312A1E;}
 .uk-info-section > *:last-child{margin-bottom:0;}
 .uk-margin-large{margin:45px 0 !important;}
-.uk-margin-large-top{margin-top:45px !important;}
 .uk-text-medium{font-size:20px;line-height:26px;}
 .uk-iframe{max-width:100%;}
 .uk-text-hidden{text-indent:100%;overflow:hidden;white-space:nowrap;}
 .uk-list-col-2{column-count:2;-webkit-column-count:2;-moz-column-count:2;}
-.uk-padding-top{padding-top:25px;}
-.uk-padding-bottom{padding-bottom:25px;}
-
-/* Forms */
-select,textarea,input:not([type]),input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"] {
-    padding: 5px;
-    border: 1px solid #ffffff;
-    background: #F1F2F0;
-    color: #312A1E;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    border-radius: 2px;
-    height: 32px;
-}
-:-ms-input-placeholder{color:#ABACAA !important;}
-::-moz-placeholder{color:#ABACAA;}
-::-webkit-input-placeholder{color:#ABACAA;}
-.uk-form :disabled:-ms-input-placeholder{color:#ABACAA !important;}
-.uk-form :disabled::-moz-placeholder{color:#ABACAA;}
-.uk-form :disabled::-webkit-input-placeholder{color:#ABACAA;}
-.ng-invalid{border-color:#DC1B17 !important;}
-
-/* Datepicker */
-.uk-datepicker{background:#F1F2F0;border:1px solid #ffffff;box-shadow:0 0 3px rgba(0,0,0,0.3);-moz-box-shadow:0 0 3px rgba(0,0,0,0.3);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.3);margin-top:0;color:#312A1E;}
-.uk-datepicker-nav a,.uk-datepicker-table a{color:#312A1E;}
-.uk-datepicker-table a:hover,.uk-datepicker-table a:focus{background:#ABACAA;color:#ffffff;}
-.uk-datepicker-table a.uk-active{background:#0B333F;color:#FFFFFF;}
-
-/* Buttons */
-.uk-button{border-radius:3px;background:#FAFAF8;color:#312A1E;}
-.uk-button:hover{background:#E4E5E2;color:#312A1E;}
-.uk-button:active,.uk-button.uk-active{}
-.uk-button:disabled,.uk-button:disabled:hover,.uk-button:disabled:focus{background:#C2C4C2;color:#ffffff;}
-.uk-button-primary{background:#7C9549;color:#ffffff;}
-.uk-button-primary:hover,.uk-button-primary:focus{background:#3F803F;color:#ffffff;}
-
-/* Spinner */
-.spinner-container{position:relative;}
-
-/* Divider */
-.uk-grid-divider > *:nth-child(n+2){border-left:1px dotted #312A1E;}
 
 /* List Icon */
 .uk-list-icon li{padding-left:12px;position:relative;}
@@ -114,7 +71,9 @@ select,textarea,input:not([type]),input[type="text"],input[type="password"],inpu
 .uk-navbar-toggle:hover,.uk-navbar-toggle:focus{color:#DC1B17;background:#FFFFFF;}
 
 /* Panel */
-.uk-panel-box{background:#E4E5E2;border-radius:10px;padding:20px;border:1px solid white;color:#312A1E;}
+.uk-panel-box{padding:0;color:#312A1E;background:none;}
+.uk-panel-box .uk-panel-title{color:#312A1E;font-size:24px;line-height:30px;}
+.uk-panel-box > * + .uk-panel-title{margin-top:25px;}
 
 /* DL */
 .uk-description-list-horizontal > dt{width:100px;}
@@ -130,19 +89,6 @@ select,textarea,input:not([type]),input[type="text"],input[type="password"],inpu
 .uk-overlay img{transform-origin:left bottom 0;-ms-transform-origin:left bottom 0;-webkit-transform-origin:left bottom 0;transition:all 0.4s ease-in-out 0s;-webkit-transition:all 0.4s ease-in-out 0s;}
 .uk-overlay:hover .uk-overlay-area{left:0;}
 .uk-overlay:hover img{transform:scale(1.2) translate(-20px);-ms-transform:scale(1.2) translate(-20px);-webkit-transform:scale(1.2) translate(-20px);}
-
-/* Tickets panel */
-.ticketsapp-container{padding:0 40px;}
-.uk-panel-box-tickets{padding:25px 65px;border:0;}
-.uk-panel-box-tickets-inner{background:#312A1E;border-radius:10px;padding:10px;}
-.uk-panel-box-tickets-inner-content{background:#E4E5E2;border-radius:10px;padding:0 25px;}
-.uk-panel-box-tickets-circle{position:absolute;top:50%;width:150px;height:150px;background:#312A1E;z-index:1;margin-top:-75px;}
-.circle-left{left:-105px;}
-.circle-right{right:-105px;}
-.uk-panel-box-tickets .uk-panel-title{font-size:24px;line-height:32px;color:#312A1E;}
-.uk-panel-box-tickets div{line-height:32px;}
-.uk-panel-box-tickets .success-text{padding:40px 0;}
-.uk-panel-box-tickets .success-text > div{margin-bottom:20px;}
 
 /* Only Phones */
 @media (max-width:768px) {
@@ -164,18 +110,6 @@ select,textarea,input:not([type]),input[type="text"],input[type="password"],inpu
     /* Sponsors */
     .sponsor-img{margin:5px !important;}
     /*.at-logo{max-width: 60px;}*/
-
-    /* Divider */
-    .uk-grid-divider > *:nth-child(n+2){border-left:0;}
-    .uk-grid-divider > *:nth-child(n+2) > div{border-top:1px dotted #312A1E;}
-
-    /* Tickets panel */
-    .ticketsapp-container{padding:0;}
-    .uk-panel-box-tickets{padding:10px;}
-    .uk-panel-box-tickets-inner{padding:5px;}
-    .uk-panel-box-tickets-inner-content{padding:0 10px;}
-    .uk-panel-box-tickets-circle{display:none;}
-    .ticketsapp-container .uk-grid.uk-grid-small.uk-grid-width-1-1 > div + div {margin-top:10px;}
 }
 
 /* Hi-res Images */
