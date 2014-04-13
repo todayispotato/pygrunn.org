@@ -215,7 +215,7 @@
       this.scope.data.confirming = true;
       this.spinner.spin();
       return this.http({
-        url: "http://10.0.30.198:5000/confirm",
+        url: "",
         dataType: "json",
         method: "POST",
         data: this.scope.data.dynamic,
