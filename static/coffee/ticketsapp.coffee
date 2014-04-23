@@ -49,7 +49,7 @@ ticketsapp.filter("amount", (currencies) ->
 class TicketsController
 
   @$inject = ["$scope", "$http", "$window", "$routeParams", "$cookies",
-  "$location", "currencies", "settings", "spinner"]
+    "$location", "currencies", "settings", "spinner"]
 
   constructor: (@scope, @http, @window, @routeParams, @cookies, @location,
       @currencies, @settings, @spinner) ->
