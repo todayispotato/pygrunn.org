@@ -117,8 +117,8 @@ class TicketsController
 
     @return [Boolean] True if there is a successful payment, false otherwise.
     ###
-    if @routeParams["paid"] is "success" and @cookies.paymentUrl and data.isPaid is false
-      data.isPaid = True
+    if @routeParams["paid"] is "success" and @cookies.paymentUrl and @scope.data.paid is false
+      @scope.data.paid = true
 
   thereIsTotal: =>
     ###
@@ -163,7 +163,7 @@ class TicketsController
     @scope.data.confirming = true
     @spinner.spin()
     @http({
-      url: "",
+      url: "10.0.30.198:5000/confirm",
       dataType: "json",
       method: "POST",
       data: @scope.data.dynamic,

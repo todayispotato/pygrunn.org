@@ -153,8 +153,8 @@
       
       @return [Boolean] True if there is a successful payment, false otherwise.
        */
-      if (this.routeParams["paid"] === "success" && this.cookies.paymentUrl && data.isPaid === false) {
-        return data.isPaid = True;
+      if (this.routeParams["paid"] === "success" && this.cookies.paymentUrl && this.scope.data.paid === false) {
+        return this.scope.data.paid = true;
       }
     };
 
@@ -215,7 +215,7 @@
       this.scope.data.confirming = true;
       this.spinner.spin();
       return this.http({
-        url: "http://10.0.30.198:5000/confirm",
+        url: "10.0.30.198:5000/confirm",
         dataType: "json",
         method: "POST",
         data: this.scope.data.dynamic,
