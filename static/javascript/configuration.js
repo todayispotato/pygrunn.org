@@ -28,7 +28,7 @@
         "currency": "EUR"
       }
     },
-    "paymentMethods": ["iDeal", "Mastercard", "Visa", "AmericanExpress", "VisaDebit"]
+    "paymentMethods": ["iDeal", "Mastercard", "Visa"]
   });
 
 }).call(this);

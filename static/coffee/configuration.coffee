@@ -24,8 +24,6 @@ ticketsapp.constant("settings", {
   "paymentMethods": [
     "iDeal",
     "Mastercard",
-    "Visa",
-    "AmericanExpress",
-    "VisaDebit"
+    "Visa"
   ]
 })
