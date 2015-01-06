@@ -1,7 +1,0 @@
-output
-
-# use glob syntax.
-syntax: glob
-
-*.pid
-*.pyc
