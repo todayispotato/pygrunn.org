@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*- #
 import os
 
+PYGRUNN_YEAR = 2014
+
 AUTHOR = u'PyGrunn Community'
 SITENAME = u'PyGrunn'
 SITEURL = 'http://pygrunn.org'
