@@ -13,12 +13,20 @@
                     <a data-uk-modal="{target:'#bio-{{ speaker.slug }}'}">More information</a>
                     <div id="bio-{{ speaker.slug }}" class="uk-modal">
                         <div class="uk-modal-dialog uk-text-justify">
+
                             <img class="with-shadow" width="80" src="/theme/images/speakers/jeff_knupp.jpeg" alt="{{ speaker.name }}" />
                             <span class="uk-text-middle uk-text-bold uk-margin-left">{{ speaker.name }}</span>
                             <p class="uk-text-bold">{{ talk.fulltitle }}</p>
                             <p>{{ talk.content }}</p>
+
                             <p class="uk-text-bold">BIO information</p>
-                            <p>{{ speaker.content }}</p>
+                            {% if speaker and speaker.content %}
+                                <p>{{ speaker.content }}</p>
+                            {% else %}
+                                <p>There's not information yet on this speaker.</p>
+                                <p>Are you '{{ speaker.name }}' or know him/her well? 
+                                   You can add some bio by creating a pull request on <a href="https://github.com/paylogic/pygrunn.org/" target="_blank">GitHub</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

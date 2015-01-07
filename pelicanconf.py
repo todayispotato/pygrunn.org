@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = u'en'
 
+PATH = 'content'
+
 # Blogroll. These are not used.
 LINKS = (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
          ('Python.org', 'http://python.org'),
@@ -26,7 +28,11 @@ DEFAULT_PAGINATION = False
 
 THEME = os.path.join(os.path.dirname(__file__), 'themes', 'pygrunn')
 
-STATIC_PATHS = [os.path.join(os.path.dirname(os.path.abspath(__file__)), 'themes', 'pygrunn', 'static')]
+
+def makepath(*args):
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), *args)
+
+STATIC_PATHS = [makepath('themes', 'pygrunn', 'static'), makepath('media', 'speaker-image', '*.jpeg')]
 
 # Uncomment following line for absolute URLs in production:
 RELATIVE_URLS = True

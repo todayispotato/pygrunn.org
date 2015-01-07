@@ -19,10 +19,8 @@ Changes should go into a pull request that will be merged into the 'release' bra
 Setting up a development environment
 ------------------------------------
 
-* pip install pelican
-* Install the template: `pelican-themes -i pygrunn`
+* pip install pelican (3.5.0 at this point in time)
 * Start the development server: `./develop_server.sh start`
-* When you change the template you need to reinstall it: `pelican-themes -r pygrunn; pelican-themes -i pygrunn`
 * 'make devserver' will run the devserver while automatically regenating all files upon changes.
 
 
