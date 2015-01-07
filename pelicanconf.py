@@ -32,7 +32,7 @@ THEME = os.path.join(os.path.dirname(__file__), 'themes', 'pygrunn')
 def makepath(*args):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), *args)
 
-STATIC_PATHS = [makepath('themes', 'pygrunn', 'static'), makepath('media', 'speaker-image', '*.jpeg')]
+STATIC_PATHS = [makepath('themes', 'pygrunn', 'static'), makepath('content', 'speaker-images')]
 
 # Uncomment following line for absolute URLs in production:
 RELATIVE_URLS = True
