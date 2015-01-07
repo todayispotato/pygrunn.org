@@ -1,5 +1,6 @@
 :slug: jeff-knupp
 :name: Jeff Knupp
+:image: jeff_knupp.jpeg
 
 Jeff Knupp is the author of "Writing Idiomatic Python" and maintains a popular 
 Python blog at `http://www.jeffknupp.com <http://www.jeffknupp.com/>`_. 

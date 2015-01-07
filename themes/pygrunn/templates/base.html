@@ -16,6 +16,19 @@
     <link rel="stylesheet" href="/theme/stylesheets/jquery.fancybox.css" />
     <link rel="stylesheet" href="/theme/stylesheets/style.css" />
 
+    <!-- Because of the dynamic PyGrunn year system, this is now here. Got a better idea? Create a pull-request. -->
+    <style>
+        /* Hi-res Logo */
+        @media only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2){
+            .uk-logo{
+                background-image: url('/theme/images/logos/pygrunn_logo_{{ PYGRUNN_YEAR }}@2x.png');
+            }
+        }
+    </style>
+
     <link rel="shortcut icon" href="/theme/images/favicon.ico">
 
 </head>

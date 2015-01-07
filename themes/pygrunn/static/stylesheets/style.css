@@ -37,12 +37,12 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .uk-icon-heading-dark{background:#E4E5E2;color:#312A1E;}
 
 /* Logo */
-.logo{width:197px;height:60px;background:url(../images/pygrunn_logo.png) no-repeat 0 0;margin:10px 0;background-size:contain;}
+.logo{width:197px;height:60px;background: no-repeat 0 0;margin:10px 0;background-size:contain;}
 
 /* Layouts */
 .uk-offcanvas-page{position:absolute;}
 .headerbar{position:fixed;top:0;width:100%;z-index:1000;}
-.fullscreen{background:url(../images/top_bg.jpg) no-repeat 50% 50%;background-size:cover;position:relative;}
+.fullscreen{background: no-repeat 50% 50%;background-size:cover;position:relative;}
 #feature{font-family:'Patua One',cursive;}
 
 /* Sponsors */
@@ -95,29 +95,6 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 
 /* Speakers */
 .speakers-image{margin:0 auto;width:160px;height:160px;overflow:hidden;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;}
-#valerio-basile-image{background-image:url(../images/speakers/valerio_basile.jpeg);}
-#guido-kollerie-image{background-image:url(../images/speakers/guido_kollerie.jpeg);}
-#kilian-evang-image{background-image:url(../images/speakers/kilian_evang.jpeg);}
-#pawel-lewicki-image{background-image:url(../images/speakers/pawel_lewicki.jpeg);}
-#kenneth-reitz-image{background-image:url(../images/speakers/kenneth_reitz.jpeg);}
-#dmitrijs-milajevs-image{background-image:url(../images/speakers/dmitrijs_milajevs.jpeg);}
-#job-ganzevoort-image{background-image:url(../images/speakers/job_ganzevoort.jpeg);}
-#gijs-molenaar-image{background-image:url(../images/speakers/gijs_molenaar.jpeg);}
-#greg-kowal-image{background-image:url(../images/speakers/greg_kowal.jpeg);}
-#rodrigo-pimentel-image{background-image:url(../images/speakers/rodrigo_pimentel.jpeg);}
-#saul-ibarra-corretge-image{background-image:url(../images/speakers/saul_ibarra_corretge.jpeg);}
-#dirk-zittersteyn-image{background-image:url(../images/speakers/dirk_zittersteyn.jpeg);}
-#denis-bilenko-image{background-image:url(../images/speakers/denis_bilenko.jpeg);}
-#douwe-van-der-meij-image{background-image:url(../images/speakers/douwe_van_der_meij.jpeg);}
-#erik-romijn-image{background-image:url(../images/speakers/erik_romijn.jpeg);}
-#oscar-vilaplana-image{background-image:url(../images/speakers/oscar_vilaplana.jpeg);}
-#berco-beute-image{background-image:url(../images/speakers/berco_beute.jpeg);}
-#henk-doornbos-image{background-image:url(../images/speakers/henk_doornbos.jpeg);}
-#avi-flax-image{background-image:url(../images/speakers/avi_flax.jpeg);}
-#armin-ronacher-image{background-image:url(../images/speakers/armin_ronacher.jpeg);}
-#artur-barseghyan-image{background-image:url(../images/speakers/artur_barseghyan.jpeg);}
-#jeff-knupp-image{background-image:url(../images/speakers/jeff_knupp.jpeg);}
-#panel-image{background-image:url(../images/speakers/panel.png);background-color:#FEFEFE;}
 #panel-inner-image{background-color:#ECECEC;}
 
 /* Sticky Custom */
@@ -151,8 +128,6 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2){
-    /* Logo */
-    .uk-logo{background-image:url(../images/pygrunn_logo@2x.png);}
     /* Sponsor Logos */
     .paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
     .getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}

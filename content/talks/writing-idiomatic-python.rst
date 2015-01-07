@@ -1,6 +1,7 @@
 :slug: writing-idiomatic-python
 :year: 2014
 :speaker: jeff-knupp
+:priority: 1
 :title: Keynote: Writing idiomatic Python
 :fulltitle: Writing Idiomatic Python: Towards Comprehensible and Maintainable Code
 

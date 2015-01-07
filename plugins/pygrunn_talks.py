@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from collections import defaultdict
+from datetime import datetime
 import logging
 
 from pelican.contents import Content, is_valid_content
@@ -16,11 +18,18 @@ class Talk(Content):
     mandatory_properties = ('slug',)
     default_template = 'page'
 
+    def get_priority(self):
+        if not hasattr(self, 'priority'):
+            return 100
+        else:
+            return int(self.priority)
+
 
 class TalkManager(object):
     """Manager for easy access to talk objects in templates."""
-    def __init__(self):
+    def __init__(self, settings):
         self.contents = {}
+        self.settings = settings
 
     def add(self, content):
         if not isinstance(content, Talk):
@@ -33,7 +42,20 @@ class TalkManager(object):
         return getattr(content, "content", "")
 
     def all(self):
-        return self.contents.values()
+        return sorted(self.contents.values(), key=lambda x: x.get_priority())
+
+    def by_year(self):
+        year_dict = defaultdict(list)
+        for talk in self.all():
+            talk_year = int(talk.year)
+            year_dict[talk_year].append(talk)
+        return year_dict
+
+    def only_current(self):
+        """Retrieves the talks related to the current year, which is read from pelican settings."""
+        current_year = self.settings.get('PYGRUNN_YEAR', datetime.now().year)
+        current_year = int(current_year)
+        return [talk for talk in self.all() if int(talk.year) == current_year]
 
 
 class TalkGenerator(Generator):
@@ -44,8 +66,8 @@ class TalkGenerator(Generator):
 
     """
     def __init__(self, *args, **kwargs):
-        self.talk_manager = TalkManager()
         super(TalkGenerator, self).__init__(*args, **kwargs)
+        self.talk_manager = TalkManager(self.settings)
 
     def generate_context(self):
         for talk_file in self.get_files(self.settings.get('TALKS_DIR', 'talks'),

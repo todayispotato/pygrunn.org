@@ -30,12 +30,6 @@ DEFAULT_PAGINATION = False
 
 THEME = os.path.join(os.path.dirname(__file__), 'themes', 'pygrunn')
 
-
-def makepath(*args):
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), *args)
-
-STATIC_PATHS = [makepath('themes', 'pygrunn', 'static'), makepath('content', 'speaker-images')]
-
 # Uncomment following line for absolute URLs in production:
 RELATIVE_URLS = True
 
@@ -44,5 +38,5 @@ RELATIVE_URLS = True
 PLUGINS = ('plugins.pygrunn_talks', 'plugins.pygrunn_speakers')
 
 # Exclude speaker and talk pages from other content.
-ARTICLE_EXCLUDES = ['pages', 'speakers', 'talks']
-PAGE_EXCLUDES = ['talks', 'speakers']
+ARTICLE_EXCLUDES = ['pages', 'speakers', 'talks', 'speaker-images']
+PAGE_EXCLUDES = ['talks', 'speakers', 'speaker-images']

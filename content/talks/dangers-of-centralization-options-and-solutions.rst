@@ -1,6 +1,7 @@
 :slug: dangers-of-centralization-options-and-solutions
 :speaker: panel
 :year: 2014
+:priority: 1000
 :title: Dangers of centralization. Options and solutions.
 :fulltitle: Dangers of centralization. Options and solutions.
 
