@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 import os
 
-PYGRUNN_YEAR = 2014
+PYGRUNN_YEAR = 2015
 
 AUTHOR = u'PyGrunn Community'
 SITENAME = u'PyGrunn'
