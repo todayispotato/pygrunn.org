@@ -70,6 +70,7 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
+	echo pygrunn.org > $(OUTPUTDIR)/CNAME
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
 
