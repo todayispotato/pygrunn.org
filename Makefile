@@ -69,7 +69,7 @@ github: publish
 	cp $(OUTPUTDIR)/pages/page-not-found.html $(OUTPUTDIR)/404.html
 	# To use a custom DNS name with GitHub Pages there needs to be a /CNAME file
 	# in the 'gh-pages' branch containing the DNS name to be used for the site.
-	echo developer.paylogic.com > $(OUTPUTDIR)/CNAME
+	cp CNAME > $(OUTPUTDIR)/
 ifeq ($(TRAVIS_PULL_REQUEST), false)
 	# Import the generated static files to the 'gh-pages' branch.
 	ghp-import $(OUTPUTDIR)
