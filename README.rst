@@ -69,7 +69,7 @@ logo, top artwork, and speaker list are updated automatically.
 Publishing changes
 ------------------
 
-This repo is set up the way travis will build the static content
+This repo is set up the way ``travis`` will build the static content
 automatically on every push to ``master`` branch, and then will push the
 build result to ``gh-pages`` branch, which is then served by
 ``GitHub Pages``.
