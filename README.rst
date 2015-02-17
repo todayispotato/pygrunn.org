@@ -21,8 +21,17 @@ Changes should go into a pull request that will be merged into the
 Setting up a development environment
 ------------------------------------
 
--  ‘make devserver’ will run the devserver while automatically
-   regenerating all files upon changes.
+To run the developer portal locally (e.g. to easily preview changes) the
+following steps should help you get started::
+
+  # Clone the git repository.
+  git clone git@github.com:paylogic/pygrunn.org.git
+
+  # Run Pelican and view the result in a web browser.
+  cd pygrunn.org
+  make devserver [DEVSERVER_PORT=<port>]
+  gnome-open http://127.0.0.1:8000  # DEVSERVER_PORT is 8000 by default
+
 
 Adding speaker/talk content
 ---------------------------
