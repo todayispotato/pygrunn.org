@@ -1,0 +1,15 @@
+branches:
+  only:
+  - master
+language: python
+python:
+- 2.7
+script:
+- make github
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+env:
+  global:
+    secure: "lV/dE6yO+iF1Xd/orOZwWQbhAZ5FBUNhOMO3xkwdOUaUZohTFHiUVURNLTrCbuBr7FiWkcoE8UtDsbT2QJhKxthuIMpY/Pquu9vFY83Dhx2Xxm/+KDzOhKjHDIJ/01CugLr3piQZUTzgHcU2FdeKqMspvTXlPkL4VYIamis/v7A="
