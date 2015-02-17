@@ -19,9 +19,7 @@ Changes should go into a pull request that will be merged into the 'release' bra
 Setting up a development environment
 ------------------------------------
 
-* pip install pelican (3.5.0 at this point in time)
-* Start the development server: `./develop_server.sh start`
-* 'make devserver' will run the devserver while automatically regenating all files upon changes.
+* 'make devserver' will run the devserver while automatically regenerating all files upon changes.
 
 
 Adding speaker/talk content
@@ -30,7 +28,7 @@ Adding speaker/talk content
 The new talk tracking system splits up the speaker and talk. You can add talks in content/talks/. See an existing .rst talk file on how to use this.
 The talk takes an optional :priority: attribute, which is used to sort the talks.
 
-The system will look for a speaker that is associated with the talk. 
+The system will look for a speaker that is associated with the talk.
 Therefore you must give the speaker as slug, the system expects the speaker file (content/speakers/) to have the same name, but with .rst extension.
 
 See some existing speakers and talks for more details.
