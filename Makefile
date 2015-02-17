@@ -21,7 +21,7 @@ DEVSERVER_PORT=8000
 LC_TIME = en_US.UTF-8
 
 help:
-	@echo 'Makefile for the Paylogic developer portal'
+	@echo 'Makefile for the pygrunn.org portal'
 	@echo ''
 	@echo '  Usage:'
 	@echo ''
