@@ -51,12 +51,7 @@ serve: .env
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 
 devserver: .env
-	-make stopserver
-	$(BASEDIR)/develop_server.sh restart $(DEVSERVER_PORT)
-
-stopserver:
-	$(BASEDIR)/develop_server.sh stop $(DEVSERVER_PORT)
-	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
+	$(BASEDIR)/develop_server.sh $(DEVSERVER_PORT)
 
 publish: .env
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
