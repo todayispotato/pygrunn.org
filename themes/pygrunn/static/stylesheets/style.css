@@ -51,20 +51,22 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;height:auto;max-width:100%}
 .paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
 .getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
-.minddistrict-logo{width:155px;height:53px;background-image:url(../images/sponsors/minddistrict_light.png);}
+.minddistrict-logo{width:140px;height:53px;background-image:url(../images/sponsors/minddistrict_light.png);}
 .goldmund-logo{width:300px;height:44px;background-image:url(../images/sponsors/goldmund_light.png);}
 .media2b-logo{width:200px;height:38px;background-image:url(../images/sponsors/media2b_light.png);}
 .at-logo{width:95px;height:44px;background-image:url(../images/sponsors/at_light.png);}
-.voys-logo{width:100px;height:32px;background-image:url(../images/sponsors/voys_light.png);}
-.launchcafe-logo{width:120px;height:31px;background-image:url(../images/sponsors/launchcafe_light.png);}
-.experty-logo{width:100px;height:31px;background-image:url(../images/sponsors/experty_light.png);}
+.voys-logo{width:100px;height:38px;background-image:url(../images/sponsors/voys_light.png);}
+.launchcafe-logo{width:90px;height:31px;background-image:url(../images/sponsors/launchcafe_light.png);}
+.experty-logo{width:90px;height:31px;background-image:url(../images/sponsors/experty_light.png);}
 .maykin-media-logo{width:100px;height:48px;background-image:url(../images/sponsors/maykin_media_light.png);}
-.optiver-logo{width:100px;height:39px;background-image:url(../images/sponsors/optiver_light.png);}
+.optiver-logo{width:100px;height:32px;background-image:url(../images/sponsors/optiver_light.png);}
 .peperzaken-logo{width:90px;height:21px;background-image:url(../images/sponsors/peperzaken_light.png);}
 .academic-transfer-logo{width:80px;background-image:url(../images/sponsors/at_light.png);}
-.resello-logo{width:100px;height:35px;background-image:url(../images/sponsors/resello_light.png);}
-.crop-r-logo{width:100px;height:35px;background-image:url(../images/sponsors/crop-r_light.png);}
+.resello-logo{width:100px;height:32px;background-image:url(../images/sponsors/resello_light.png);}
+.crop-r-logo{width:100px;height:32px;background-image:url(../images/sponsors/crop-r_light.png);}
 .spindle-logo{width:150px;height:60px;background-image:url(../images/sponsors/spindle_light.png);}
+.dmc-logo{width:80px;height:32px;background-image:url(../images/sponsors/dmc_light.png);}
+.and-logo{width:70px;height:32px;background-image:url(../images/sponsors/and_light.png);}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}
