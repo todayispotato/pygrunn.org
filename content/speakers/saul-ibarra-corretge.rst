@@ -2,5 +2,5 @@
 :name: Saúl Ibarra Corretgé
 :image: saul_ibarra_corretge.jpeg
 
+VoIP, presence and IM lover, geek, Pythonista, geek again! I once got trapped in an event loop, and never got out of it.
 
-Saghul is a Python and C developer who loves anything and everything that has to do with sockets.
