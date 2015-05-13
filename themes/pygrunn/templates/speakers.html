@@ -14,6 +14,7 @@
                     <a data-uk-modal="{target:'#bio-{{ talk.speaker }}'}">More information</a>
                     <div id="bio-{{ speaker.slug }}" class="uk-modal">
                         <div class="uk-modal-dialog uk-text-justify">
+                            <a class="uk-modal-close uk-close"></a>
 
                             <img class="with-shadow" width="80" src="/images/speakers/{{ speaker.image }}" alt="{{ speaker.name|e }}" />
                             <span class="uk-text-middle uk-text-bold uk-margin-left">{{ speaker.name }}</span>
