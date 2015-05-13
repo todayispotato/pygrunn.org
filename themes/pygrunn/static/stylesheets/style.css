@@ -92,6 +92,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .table-responsive > table {
     min-width: 780px;
     position: relative;
+    left: 0;
 }
 
 /* Schedule table */
