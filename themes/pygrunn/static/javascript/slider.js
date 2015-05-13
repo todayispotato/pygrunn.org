@@ -1,6 +1,8 @@
 ;(function (window, $) {
 
     var win, doc, pos,
+        stopEvents,
+        startEvents,
         tableContainer,
         tableContainerWidth,
         table,
@@ -12,6 +14,16 @@
     pos = 0;
     tableContainer = $('.table-responsive');
     table = tableContainer.find('table');
+    startEvents = ['mousemove', 'touchmove'];
+    stopEvents = ['mouseout', 'mouseup', 'touchend'];
+
+    function validStartEvent(eventType) {
+        return startEvents.indexOf(eventType) > -1;
+    }
+
+    function validStopEvent(eventType) {
+        return stopEvents.indexOf(eventType) > -1;
+    }
 
     function tableLeft() {
         return parseInt(table.css('left'), 10);
@@ -30,19 +42,19 @@
     }
 
     function isStopped(eventType, phase) {
-        return ((eventType == 'mouseout' || eventType == 'mouseup') && phase == 'end') || phase == 'cancel';
+        return (validStopEvent(eventType) && phase == 'end') || phase == 'cancel';
     }
 
     function handleSwipeStatus(event, phase, direction, distance, duration, fingers) {
-        if (event.type == 'mousemove') {
-            handleMousemove(direction, distance);
+        if (validStartEvent(event.type)) {
+            handleMove(direction, distance);
         }
         if (isStopped(event.type, phase)) {
             handleStop();
         }
     }
 
-    function handleMousemove(direction, distance) {
+    function handleMove(direction, distance) {
         if (direction == 'left') {
             moveLeft(distance);
         } else if (direction == 'right') {
@@ -86,7 +98,8 @@
         tableContainer.swipe({
             swipeStatus: handleSwipeStatus,
             triggerOnTouchLeave: true,
-            threshold: 0
+            threshold: 0,
+            allowPageScroll: 'auto'
         });
 
     });
