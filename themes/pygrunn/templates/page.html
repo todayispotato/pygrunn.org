@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="PyGrunn">
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="/theme/stylesheets/uikit.min.css" />
+    <link rel="stylesheet" href="/theme/stylesheets/style.css" />
+
+    <!-- Because of the dynamic PyGrunn year system, this is now here. Got a better idea? Create a pull-request. -->
+    <style>
+        /* Hi-res Logo */
+        @media only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2){
+            .uk-logo{
+                background-image: url('/theme/images/logos/pygrunn_logo_{{ PYGRUNN_YEAR }}@2x.png');
+            }
+        }
+    </style>
+
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="headerbar with-shadow">
+
+        <nav class="uk-navbar with-border">
+
+            <div class="uk-container uk-container-center">
+
+                <div class="uk-clearfix">
+
+                    <a class="logo uk-float-left uk-display-block" data-uk-smooth-scroll style="background-image: url('/theme/images/logos/pygrunn_logo_{{ PYGRUNN_YEAR }}.png');"></a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+    {{ page.content }}
+
+    <div id="footer" class="block-small">
+        <div class="uk-container uk-container-center">
+            <section class="footer uk-text-center">
+                &copy;2015 PyGrunn
+            </section>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/theme/javascript/uikit.min.js"></script>
+    <script src="/theme/javascript/jquery.touchSwipe.min.js"></script>
+    <script src="/theme/javascript/slider.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-48221565-2', 'pygrunn.org');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>

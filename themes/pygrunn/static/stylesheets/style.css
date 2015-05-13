@@ -12,6 +12,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .bg-dark a:hover,.bg-dark .uk-link:hover{color:#FFFFFF;}
 *:focus,a:focus{outline:none;}
 .uk-text-small{font-size:12px;}
+.uk-container{padding:0 15px;}
 
 /* Extra classes */
 .text-contrast *:not(i):not(a){color:#E4E5E2 !important;}
@@ -67,6 +68,96 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .spindle-logo{width:150px;height:60px;background-image:url(../images/sponsors/spindle_light.png);}
 .dmc-logo{width:80px;height:32px;background-image:url(../images/sponsors/dmc_light.png);}
 .and-logo{width:70px;height:32px;background-image:url(../images/sponsors/and_light.png);}
+
+.page-content{padding-top:96px;}
+
+/* Dropdown */
+.uk-dropdown{box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);border-radius: 3px;}
+.uk-tab-responsive .uk-dropdown{background:#0B333F;color:#FFF;}
+.uk-tab-responsive .uk-nav-dropdown > li > a{color:#FFF;}
+.uk-tab-responsive .uk-nav-dropdown > li > a:hover,.uk-tab-responsive .uk-nav-dropdown > li > a:focus{background: #FFF;color:#0B333F;}
+
+/* Table */
+.uk-table.uk-table-middle thead th {
+    vertical-align: middle !important;
+}
+
+/* Responsive table */
+.table-responsive {
+    max-width: 100%;
+    overflow: hidden;
+    cursor: move;
+}
+
+.table-responsive > table {
+    min-width: 780px;
+    position: relative;
+}
+
+/* Schedule table */
+.table-schedule thead tr th {
+    border-bottom-width: 3px;
+}
+
+.table-schedule tr td,
+.table-schedule tr th {
+    text-align: center;
+    border: 1px solid #E4E5E2;
+    background: #FFF;
+    padding: 10px;
+}
+
+.table-schedule tr td:empty {
+    background: none;
+}
+
+.table-schedule tr td[colspan],
+.table-schedule tr td.table-schedule-cell-bg {
+    background: #312A1E;
+    color: #E4E5E2;
+}
+
+/* Tab */
+.uk-tab-center {
+    border: 0;
+}
+
+.uk-tab > li {
+    margin: 0 10px;
+}
+
+.uk-tab > li > a {
+    color: #0B333F;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.uk-tab > li > a:hover,
+.uk-tab > li > a:focus,
+.uk-tab > li.uk-open > a {
+    background-color: #FFF;
+    color: #0B333F;
+}
+
+.uk-tab > li.uk-active > a {
+    background: #0B333F;
+    color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.uk-tab > li:nth-child(n+2) > a {
+    margin: 0;
+}
+
+.uk-tab > li:not(.uk-active) > a:hover,
+.uk-tab > li:not(.uk-active) > a:focus,
+.uk-tab > li.uk-open:not(.uk-active) > a {
+    margin: 0;
+    padding-bottom: 10px;
+}
 
 /* Navbar */
 .uk-navbar{background:#0B333F;color:#FFFFFF;}

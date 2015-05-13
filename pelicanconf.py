@@ -40,3 +40,11 @@ PLUGINS = ('plugins.pygrunn_talks', 'plugins.pygrunn_speakers')
 # Exclude speaker and talk pages from other content.
 ARTICLE_EXCLUDES = ['pages', 'speakers', 'talks', 'speaker-images']
 PAGE_EXCLUDES = ['talks', 'speakers', 'speaker-images']
+
+# The URL we will use to link to a page.
+PAGE_URL = '{slug}'
+# The location we will save the page.
+PAGE_SAVE_AS = '{slug}.html'
+
+# Specifies where you want the slug to be automatically generated from.
+SLUGIFY_SOURCE = 'basename'

@@ -21,7 +21,7 @@ Changes should go into a pull request that will be merged into the
 Setting up a development environment
 ------------------------------------
 
-To run the developer portal locally (e.g. to easily preview changes) the
+To run the pygrunn website locally (e.g. to easily preview changes) the
 following steps should help you get started::
 
   # Clone the git repository.
