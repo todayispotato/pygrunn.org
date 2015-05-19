@@ -1,6 +1,6 @@
 :slug: elastic-search
 :speaker: boaz-leskes
-:year: 
+:year: 0
 :title: Elastic Search (Keynote)
 :fulltitle: Elastic Search (Keynote)
 
