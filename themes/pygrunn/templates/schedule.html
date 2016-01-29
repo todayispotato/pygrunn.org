@@ -1,11 +1,211 @@
-<div id="schedule" class="block with-border">
-    <div class="uk-container uk-container-center">
-        <section class="schedule">
-            <div class="uk-text-center"><i class="uk-icon-calendar uk-icon-large uk-icon-heading"></i></div>
-            <h1 class="uk-text-center uk-heading-large">Schedule 2015</h1>
-            <div class="uk-text-center">
-                <iframe class="uk-display-inline-block with-shadow uk-iframe" width="749" height="800" src="https://docs.google.com/spreadsheet/pub?key=0AjHV_JJcy6-3dG43dUtBSGxEeUVnUU1jYUR5UDV3QWc&output=html"></iframe>
-            </div>
-        </section>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PyGrunn Schedule</title>
+    </head>
+    <body>
+        <div class="uk-container uk-container-center page-content">
+            <section class="schedule">
+                <h1 class="uk-text-center uk-heading-large">Schedule {{ PYGRUNN_YEAR }}</h1>
+                <div class="uk-tab-center uk-margin-large-top">
+                    <ul class="uk-tab" data-uk-tab="{connect:'#schedule-tabs'}">
+                        <li class="uk-active"><a href="#">May 13 (conference)</a></li>
+                        <li><a href="#">May 14 (Sprints)</a></li>
+                        <li><a href="#">May 15 (Sprints)</a></li>
+                    </ul>
+                </div>
+                <ul id="schedule-tabs" class="uk-switcher uk-margin">
+                    <li class="uk-active">
+                        <div class="table-responsive">
+                            <table class="uk-table uk-table-middle uk-margin-remove table-schedule">
+                                <thead>
+                                    <tr>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>1 (cellar)</th>
+                                        <th>2 (ground floor)</th>
+                                        <th>3 (2nd floor)</th>
+                                        <th>4 (2nd floor)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>9:00</th>
+                                        <th></th>
+                                        <td colspan="4">Reception</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td colspan="4">Welcome speech</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>Talks</td>
+                                        <td>Talks</td>
+                                        <td>Talks</td>
+                                        <td>Talks</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td colspan="4">Lunch</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>More Talks</td>
+                                        <td>More Talks</td>
+                                        <td>More Talks</td>
+                                        <td>More Talks</td>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td colspan="4">Break</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>Even more Talks</td>
+                                        <td>Even more Talks</td>
+                                        <td>Even more Talks</td>
+                                        <td>Even more Talks</td>
+                                    <tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td colspan="4">Drinks</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>Late</th>
+                                        <td colspan="4">Speakers dinner</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="table-responsive">
+                            <table class="uk-table uk-table-middle table-schedule">
+                                <thead>
+                                    <tr>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Launch Cafe</th>
+                                        <th>Cafe nearby</th>
+                                        <th>Cafe in the city center</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>10:00</th>
+                                        <th>10:30</th>
+                                        <td class="table-schedule-cell-bg">Forming teams, announcing things to do</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>10:30</th>
+                                        <th>13:00</th>
+                                        <td>Sprinting!</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <td></td>
+                                        <td class="table-schedule-cell-bg">Lunch</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>14:00</th>
+                                        <th>18:00</th>
+                                        <td>Sprinting!</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>18:00</th>
+                                        <th>18:30</th>
+                                        <td>Team reports</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>18:30</th>
+                                        <th>22:00</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="table-schedule-cell-bg">Closing the day [Party]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="table-responsive">
+                            <table class="uk-table uk-table-middle table-schedule">
+                                <thead>
+                                    <tr>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Launch Cafe</th>
+                                        <th>Cafe nearby</th>
+                                        <th>Cafe in the city center</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>10:00</th>
+                                        <th>10:30</th>
+                                        <td class="table-schedule-cell-bg">Forming teams, announcing things to do</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>10:30</th>
+                                        <th>13:00</th>
+                                        <td>Sprinting!</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>13:00</th>
+                                        <th>14:00</th>
+                                        <td></td>
+                                        <td class="table-schedule-cell-bg">Lunch</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>14:00</th>
+                                        <th>18:00</th>
+                                        <td>Sprinting!</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>18:00</th>
+                                        <th>18:30</th>
+                                        <td>Team reports</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>18:30</th>
+                                        <th>22:00</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="table-schedule-cell-bg">Closing the day [Party]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>
