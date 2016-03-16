@@ -63,7 +63,7 @@ on top of page) a name consistent with the existing files. The files
 must be PNGs. For reference, the logo is called “pygrunn\_logo.png”,
 and the top artwork “top\_artwork.png”.
 
-Then, when swithing the ‘PYGRUNN\_YEAR’ setting to the next year, the
+Then, when switching the ‘PYGRUNN\_YEAR’ setting to the next year, the
 logo, top artwork, and speaker list are updated automatically.
 
 Publishing changes
