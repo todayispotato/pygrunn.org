@@ -49,25 +49,25 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
-.sponsor-img{background-repeat:no-repeat;background-position:0 0;background-size:contain;height:auto;max-width:100%}
-.paylogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/paylogic_light.png);}
-.getlogic-logo{width:150px;height:38px;background-image:url(../images/sponsors/getlogic_light.png);}
-.minddistrict-logo{width:140px;height:53px;background-image:url(../images/sponsors/minddistrict_light.png);}
-.goldmund-logo{width:300px;height:44px;background-image:url(../images/sponsors/goldmund_light.png);}
-.media2b-logo{width:200px;height:38px;background-image:url(../images/sponsors/media2b_light.png);}
-.at-logo{width:95px;height:44px;background-image:url(../images/sponsors/at_light.png);}
-.voys-logo{width:100px;height:38px;background-image:url(../images/sponsors/voys_light.png);}
-.launchcafe-logo{width:90px;height:31px;background-image:url(../images/sponsors/launchcafe_light.png);}
-.experty-logo{width:90px;height:31px;background-image:url(../images/sponsors/experty_light.png);}
-.maykin-media-logo{width:100px;height:48px;background-image:url(../images/sponsors/maykin_media_light.png);}
-.optiver-logo{width:100px;height:32px;background-image:url(../images/sponsors/optiver_light.png);}
-.peperzaken-logo{width:90px;height:21px;background-image:url(../images/sponsors/peperzaken_light.png);}
-.academic-transfer-logo{width:80px;background-image:url(../images/sponsors/at_light.png);}
-.resello-logo{width:100px;height:32px;background-image:url(../images/sponsors/resello_light.png);}
-.crop-r-logo{width:100px;height:32px;background-image:url(../images/sponsors/crop-r_light.png);}
-.spindle-logo{width:150px;height:60px;background-image:url(../images/sponsors/spindle_light.png);}
-.dmc-logo{width:80px;height:32px;background-image:url(../images/sponsors/dmc_light.png);}
-.and-logo{width:70px;height:32px;background-image:url(../images/sponsors/and_light.png);}
+.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;height:auto;width:150px; height: 55px;}
+.paylogic-logo{background-image:url(../images/sponsors/paylogic_light.png);}
+.hugo-logo{background-image:url(../images/sponsors/hugo_light.png);}
+.minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light.png);}
+.goldmund-logo{background-image:url(../images/sponsors/goldmund_light.png);}
+.media2b-logo{width: 200px; background-image:url(../images/sponsors/media2b_light.png);}
+.at-logo{background-image:url(../images/sponsors/at_light.png);}
+.voys-logo{background-image:url(../images/sponsors/voys_light.png);}
+.launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light.png);}
+.experty-logo{background-image:url(../images/sponsors/experty_light.png);}
+.maykin-media-logo{background-image:url(../images/sponsors/maykin_media_light.png);}
+.optiver-logo{background-image:url(../images/sponsors/optiver_light.png);}
+.peperzaken-logo{background-image:url(../images/sponsors/peperzaken_light.png);}
+.academic-transfer-logo{background-image:url(../images/sponsors/at_light.png);}
+.resello-logo{background-image:url(../images/sponsors/resello_light.png);}
+.crop-r-logo{background-image:url(../images/sponsors/crop-r_light.png);}
+.spindle-logo{background-image:url(../images/sponsors/spindle_light.png);}
+.dmc-logo{background-image:url(../images/sponsors/dmc_light.png);}
+.and-logo{background-image:url(../images/sponsors/and_light.png);}
 
 .page-content{padding-top:96px;}
 
@@ -229,7 +229,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2){
     /* Sponsor Logos */
     .paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
-    .getlogic-logo{background-image:url(../images/sponsors/getlogic_light@2x.png);}
+    .hugo-logo{background-image:url(../images/sponsors/hugo_light@2x.png);}
     .goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
     .media2b-logo{background-image:url(../images/sponsors/media2b_light@2x.png);}
     .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light@2x.png);}
