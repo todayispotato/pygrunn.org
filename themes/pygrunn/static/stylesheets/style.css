@@ -49,7 +49,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
-.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;height:auto;width:150px; height: 55px;}
+.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;width:150px; height: 55px;}
 .paylogic-logo{background-image:url(../images/sponsors/paylogic_light.png);}
 .hugo-logo{background-image:url(../images/sponsors/hugo_light.png);}
 .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light.png);}
