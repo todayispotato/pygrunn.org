@@ -49,14 +49,15 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
-.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;width:150px; height: 55px;}
+.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:170px;height:55px;}
 .paylogic-logo{background-image:url(../images/sponsors/paylogic_light.png);}
 .hugo-logo{background-image:url(../images/sponsors/hugo_light.png);}
 .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light.png);}
+.vacansoleil-logo{background-image:url(../images/sponsors/vacansoleil_light.png);}
 .goldmund-logo{background-image:url(../images/sponsors/goldmund_light.png);}
-.media2b-logo{width: 200px; background-image:url(../images/sponsors/media2b_light.png);}
-.xithing-logo{width: 200px; background-image:url(../images/sponsors/xithing_light.png);}
-.contracts11-logo{width: 200px; background-image:url(../images/sponsors/contracts11_light.png);}
+.media2b-logo{background-image:url(../images/sponsors/media2b_light.png);}
+.xithing-logo{background-image:url(../images/sponsors/xithing_light.png);}
+.contracts11-logo{background-image:url(../images/sponsors/contracts11_light.png);}
 .at-logo{background-image:url(../images/sponsors/at_light.png);}
 .voys-logo{background-image:url(../images/sponsors/voys_light.png);}
 .launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light.png);}
@@ -70,6 +71,8 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .spindle-logo{background-image:url(../images/sponsors/spindle_light.png);}
 .dmc-logo{background-image:url(../images/sponsors/dmc_light.png);}
 .and-logo{background-image:url(../images/sponsors/and_light.png);}
+.groningen-logo{background-image:url(../images/sponsors/groningen_light.png);}
+.zupr-logo{background-image:url(../images/sponsors/zupr_light.png);}
 
 .page-content{padding-top:96px;}
 
@@ -241,5 +244,6 @@ only screen and (min-device-pixel-ratio: 2){
     .experty-logo{background-image:url(../images/sponsors/experty_light@2x.png);}
     .peperzaken-logo{background-image:url(../images/sponsors/peperzaken_light@2x.png);}
     .heroku-logo{background-image:url(../images/sponsors/heroku_light@2x.png);}
+    .vacansoleil-logo{background-image:url(../images/sponsors/vacansoleil_light@2x.png);}
     .yourholding-logo{background-image:url(../images/sponsors/yourholding_light@2x.png);}
 }
