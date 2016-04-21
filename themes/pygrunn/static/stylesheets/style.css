@@ -58,6 +58,7 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .media2b-logo{background-image:url(../images/sponsors/media2b_light.png);}
 .xithing-logo{background-image:url(../images/sponsors/xithing_light.png);}
 .contracts11-logo{background-image:url(../images/sponsors/contracts11_light.png);}
+.b11-logo{width: 120px;background-image:url(../images/sponsors/b11\ advanced\ digital\ marketing.png);}
 .at-logo{background-image:url(../images/sponsors/at_light.png);}
 .voys-logo{background-image:url(../images/sponsors/voys_light.png);}
 .launchcafe-logo{background-image:url(../images/sponsors/launchcafe_light.png);}
@@ -236,6 +237,7 @@ only screen and (min-device-pixel-ratio: 2){
     .paylogic-logo{background-image:url(../images/sponsors/paylogic_light@2x.png);}
     .hugo-logo{background-image:url(../images/sponsors/hugo_light@2x.png);}
     .goldmund-logo{background-image:url(../images/sponsors/goldmund_light@2x.png);}
+    .b11-logo{background-image:url(../images/sponsors/b11\ advanced\ digital\ marketing@2x.png);}
     .media2b-logo{background-image:url(../images/sponsors/media2b_light@2x.png);}
     .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light@2x.png);}
     .at-logo{background-image:url(../images/sponsors/at_light@2x.png);}
