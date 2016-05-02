@@ -49,8 +49,11 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 /* Sponsors */
 .sponsor-images{background:rgba(11,51,63,0.7);position:absolute;bottom:0;left:0;width:100%;padding:15px 0;}
 .sponsor-images-small{background:rgba(11,51,63,1);}
-.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:170px;width:100%;height:55px;}
+.sponsor-img{background-repeat:no-repeat;background-position:center;background-size:contain;max-width:170px;width:100%;height:55px;filter:grayscale(100%);-webkit-filter:grayscale(100%);}
+.gold-sponsor{max-width:230px;width:100%;height:65px;}
 .paylogic-logo{background-image:url(../images/sponsors/paylogic_light.png);}
+.spindle-logo{background-image:url(../images/sponsors/spindle_light.png);}
+.catawiki-logo{background-image:url(../images/sponsors/catawiki_light.png);}
 .hugo-logo{background-image:url(../images/sponsors/hugo_light.png);}
 .minddistrict-logo{background-image:url(../images/sponsors/minddistrict_light.png);}
 .vacansoleil-logo{background-image:url(../images/sponsors/vacansoleil_light.png);}
@@ -69,7 +72,6 @@ a:hover,.uk-link:hover{color:#312A1E;text-decoration:none;}
 .academic-transfer-logo{background-image:url(../images/sponsors/at_light.png);}
 .resello-logo{background-image:url(../images/sponsors/resello_light.png);}
 .crop-r-logo{background-image:url(../images/sponsors/crop-r_light.png);}
-.spindle-logo{background-image:url(../images/sponsors/spindle_light.png);}
 .dmc-logo{background-image:url(../images/sponsors/dmc_light.png);}
 .and-logo{background-image:url(../images/sponsors/and_light.png);}
 .groningen-logo{background-image:url(../images/sponsors/groningen_light.png);}
