@@ -8,7 +8,7 @@
                 {% set speaker = speaker_manager.get(talk.speaker) %}
 
                 <div>
-                    <div class="with-shadow uk-border-circle speakers-image" style="background-image: url('/images/speakers/{{ speaker.image }}');"></div>
+                    <div class="with-shadow uk-border-circle speakers-image" {%- if speaker.image %}style="background-image: url('/images/speakers/{{ speaker.image }}');"{% endif %}></div>
                     <h2>{{ speaker.name|e }}</h2>
                     <p class="uk-text-bold">{{ talk.title }}</p>
                     <a data-uk-modal="{target:'#bio-{{ talk.speaker }}'}">More information</a>
@@ -16,7 +16,7 @@
                         <div class="uk-modal-dialog uk-text-justify">
                             <a class="uk-modal-close uk-close"></a>
 
-                            <img class="with-shadow" width="80" src="/images/speakers/{{ speaker.image }}" alt="{{ speaker.name|e }}" />
+                            <img class="with-shadow" width="80" {%- if speaker.image %}src="/images/speakers/{{ speaker.image }}"{% endif %} alt="{{ speaker.name|e }}" />
                             <span class="uk-text-middle uk-text-bold uk-margin-left">{{ speaker.name }}</span>
                             <p class="uk-text-bold">{{ talk.fulltitle }}</p>
 
