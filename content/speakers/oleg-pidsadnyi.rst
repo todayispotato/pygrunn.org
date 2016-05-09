@@ -1,5 +1,6 @@
 :slug: oleg-pidsadnyi
 :name: Oleg Pidsadnyi
+:image: oleg_pidsadnyi.jpg
 
 Oleg is a Python programmer at Paylogic.
 

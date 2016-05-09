@@ -1,5 +1,6 @@
 :slug: ben-meijering
 :name: Ben Meijering
+:image: ben_meijering.jpg
 
 After obtaining a PhD in Artificial Intelligence, and working in the Big Data industry, I’ve become a freelance data scientist. I do consultancy, and build machine learning products.
 

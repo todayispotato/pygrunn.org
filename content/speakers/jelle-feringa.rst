@@ -1,5 +1,6 @@
 :slug: jelle-feringa
 :name: Jelle Feringa
+:image: jelle_feringa.jpg
 
 Jelle Feringa is co-founder & CTO of Odico formwork robotics, based in Odense, Denmark.
 

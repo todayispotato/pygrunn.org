@@ -1,5 +1,6 @@
 :slug: dmitry-chaplinsky
 :name: Dmitry Chaplinsky
+:image: dmitry_chaplinsky.jpg
 
 I started to code with pen and paper when he was 11 and later won a few
 CAD/CAM/CAE contests. I'm fascinated by artificial intelligence, natural

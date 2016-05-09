@@ -1,5 +1,5 @@
 :slug: greg-kowal
-:image: greg_kowal.jpeg
+:image: greg_kowal.png
 :name: Grzegorz "Greg" Kowal
 
 

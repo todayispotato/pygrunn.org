@@ -1,5 +1,6 @@
 :slug: alex-gonzalez
 :name: Álex González
+:image: alex_gonzalez.jpg
 
 Currently working at jobandtalent.com as Software Architect he spends his free time playing around with Go & everything that smells as a container. In the past he developed a Kubernetes volume plugin that is available since 1.1.
 
