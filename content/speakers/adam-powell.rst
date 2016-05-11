@@ -1,4 +1,5 @@
 :slug: adam-powell
 :name: Adam Powell
+:image: adam_powell.jpg
 
-Adam Powell.
+Senior Data Scientist at Catawiki.
